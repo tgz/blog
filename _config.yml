@@ -8,7 +8,7 @@ subtitle:
 description:
 author: Shichuan Qiu
 language: zh-CN
-timezone:
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -77,8 +77,17 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: 
-    github: git@github.com:tgz/tgz.git
-    gitee: git@gitee.com:qqsscc/qqsscc.git
-  branch: master
+  - type: git
+    repo: 
+      github: git@github.com:tgz/tgz.git
+      gitee: git@gitee.com:qqsscc/qqsscc.git
+    branch: master
+
+  - type: rsync
+    host: blog.imqsc.xyz
+    user: root
+    root: /data/blog
+    port: 22
+    delete: true
+    verbose: true
+    ignore_errors: false
