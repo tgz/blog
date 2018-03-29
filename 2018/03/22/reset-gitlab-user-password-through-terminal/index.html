@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="GitLab," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Q">
-<meta property="og:url" content="http://imqsc.xyz/index.html">
+<meta name="description" content="通过命令行重置 GitLab 用户密码公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:">
+<meta name="keywords" content="GitLab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="reset-gitlab-user-password-through-terminal">
+<meta property="og:url" content="http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/index.html">
 <meta property="og:site_name" content="Q">
+<meta property="og:description" content="通过命令行重置 GitLab 用户密码公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-29T02:19:40.401Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Q">
+<meta name="twitter:title" content="reset-gitlab-user-password-through-terminal">
+<meta name="twitter:description" content="通过命令行重置 GitLab 用户密码公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://imqsc.xyz/"/>
+  <link rel="canonical" href="http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/"/>
 
 
 
 
 
-  <title>Q</title>
+  <title>reset-gitlab-user-password-through-terminal | Q</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,141 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shichuan Qiu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Q">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/28/ffmpeg-add-watermark/" itemprop="url">ffmpeg-add-watermark</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-28T18:08:55+08:00">
-                2018-03-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="使用-FFmpeg-给视频添加水印"><a href="#使用-FFmpeg-给视频添加水印" class="headerlink" title="使用 FFmpeg 给视频添加水印"></a>使用 FFmpeg 给视频添加水印</h1><p>接到一条求助：在视频的前 2 秒添加水印，想了下最方便的应该是使用 FFMPEG 了。简单捣鼓了一下：</p>
-<p>使用的 FFmpeg 版本：<code>3.4.2</code></p>
-<ol>
-<li>图片水印：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i source.mp4 -i 011.jpg -filter_complex <span class="string">"overlay=x='if(gte(t,2),NAN,10)':y=0[out]"</span> -map <span class="string">'[out]'</span> out.mp4</span><br></pre></td></tr></table></figure>
-<ol>
-<li>文字水印    </li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i source.mp4 -vf <span class="string">"drawtext=fontfile=/Library/Fonts/AdobeHeitiStd-Regular.otf:text='watermark测试':x=30:y=h-30:enable='if(gte(t,3),0,1)':fontsize=24:fontcolor=red@0.7"</span> output.mp4</span><br></pre></td></tr></table></figure>
-<p>附： mac 下 <a href="https://trac.ffmpeg.org/wiki/CompilationGuide/macOS" target="_blank" rel="noopener">安装 FFmpeg</a>，其中文字水印需要 –with-freetype</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">brew install ffmpeg \    </span><br><span class="line">    --with-tools \    </span><br><span class="line">    --with-fdk-aac \  </span><br><span class="line">    --with-freetype \   </span><br><span class="line">    --with-fontconfig \   </span><br><span class="line">    --with-libass \   </span><br><span class="line">    --with-libvorbis \  </span><br><span class="line">    --with-libvpx \  </span><br><span class="line">    --with-opus \  </span><br><span class="line">    --with-x265</span><br></pre></td></tr></table></figure>
-<p>或者 <a href="https://gist.github.com/clayton/6196167" target="_blank" rel="noopener">一个比较全的例子</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -378,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/22/reset-gitlab-user-password-through-terminal/" itemprop="url">reset-gitlab-user-password-through-terminal</a></h1>
+          <h1 class="post-title" itemprop="name headline">reset-gitlab-user-password-through-terminal</h1>
         
 
         <div class="post-meta">
@@ -430,9 +300,7 @@
       
 
       
-        
-          
-            <h1 id="通过命令行重置-GitLab-用户密码"><a href="#通过命令行重置-GitLab-用户密码" class="headerlink" title="通过命令行重置 GitLab 用户密码"></a>通过命令行重置 GitLab 用户密码</h1><p>公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：</p>
+        <h1 id="通过命令行重置-GitLab-用户密码"><a href="#通过命令行重置-GitLab-用户密码" class="headerlink" title="通过命令行重置 GitLab 用户密码"></a>通过命令行重置 GitLab 用户密码</h1><p>公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：</p>
 <ol>
 <li><p>找到 GitLab 的 container:<br>  <code>docker ps</code></p>
 <blockquote>
@@ -449,8 +317,6 @@
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  user=User.find_by(email: <span class="string">'name@mail.host'</span>)</span><br><span class="line">或者：user = User.find(1) <span class="comment"># 使用 userID 查询</span></span><br><span class="line"></span><br><span class="line">  user.password=<span class="string">'new_password'</span></span><br><span class="line">user.password_confirmation=<span class="string">'new_password'</span></span><br><span class="line"></span><br><span class="line">user.save</span><br></pre></td></tr></table></figure></li>
 </ol>
 
-          
-        
       
     </div>
     
@@ -465,14 +331,36 @@
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/GitLab/" rel="tag"># GitLab</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/28/ffmpeg-add-watermark/" rel="prev" title="ffmpeg-add-watermark">
+                ffmpeg-add-watermark <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -482,10 +370,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -493,6 +382,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -513,8 +406,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -565,6 +467,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#通过命令行重置-GitLab-用户密码"><span class="nav-number">1.</span> <span class="nav-text">通过命令行重置 GitLab 用户密码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -698,6 +616,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
