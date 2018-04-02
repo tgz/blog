@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ffmpeg," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="使用 FFmpeg 给视频添加水印接到一条求助：在视频的前 2 秒添加水印，想了下最方便的应该是使用 FFMPEG 了。简单捣鼓了一下： 使用的 FFmpeg 版本：3.4.2  图片水印：  1ffmpeg -i source.mp4 -i 011.jpg -filter_complex &quot;overlay=x=&apos;if(gte(t,2),NAN,10)&apos;:y=0[out]&quot; -map &apos;[out]">
-<meta name="keywords" content="ffmpeg">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ffmpeg-add-watermark">
-<meta property="og:url" content="http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/index.html">
+<meta name="description" content="科普：  语义化版本号">
+<meta property="og:type" content="website">
+<meta property="og:title" content="about">
+<meta property="og:url" content="http://imqsc.xyz/about/index.html">
 <meta property="og:site_name" content="More than code">
-<meta property="og:description" content="使用 FFmpeg 给视频添加水印接到一条求助：在视频的前 2 秒添加水印，想了下最方便的应该是使用 FFMPEG 了。简单捣鼓了一下： 使用的 FFmpeg 版本：3.4.2  图片水印：  1ffmpeg -i source.mp4 -i 011.jpg -filter_complex &quot;overlay=x=&apos;if(gte(t,2),NAN,10)&apos;:y=0[out]&quot; -map &apos;[out]">
+<meta property="og:description" content="科普：  语义化版本号">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-28T10:20:47.635Z">
+<meta property="og:updated_time" content="2018-04-02T13:51:16.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ffmpeg-add-watermark">
-<meta name="twitter:description" content="使用 FFmpeg 给视频添加水印接到一条求助：在视频的前 2 秒添加水印，想了下最方便的应该是使用 FFMPEG 了。简单捣鼓了一下： 使用的 FFmpeg 版本：3.4.2  图片水印：  1ffmpeg -i source.mp4 -i 011.jpg -filter_complex &quot;overlay=x=&apos;if(gte(t,2),NAN,10)&apos;:y=0[out]&quot; -map &apos;[out]">
+<meta name="twitter:title" content="about">
+<meta name="twitter:description" content="科普：  语义化版本号">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/"/>
+  <link rel="canonical" href="http://imqsc.xyz/about/"/>
 
 
 
 
 
-  <title>ffmpeg-add-watermark | More than code</title>
+  <title>about | More than code</title>
   
 
 
@@ -241,156 +240,37 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="野生程序员">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="More than code">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">ffmpeg-add-watermark</h1>
-        
+	<h1 class="post-title" itemprop="name headline">about</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-28T18:08:55+08:00">
-                2018-03-28
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <h1 id="使用-FFmpeg-给视频添加水印"><a href="#使用-FFmpeg-给视频添加水印" class="headerlink" title="使用 FFmpeg 给视频添加水印"></a>使用 FFmpeg 给视频添加水印</h1><p>接到一条求助：在视频的前 2 秒添加水印，想了下最方便的应该是使用 FFMPEG 了。简单捣鼓了一下：</p>
-<p>使用的 FFmpeg 版本：<code>3.4.2</code></p>
+      <div class="post-body">
+        
+        
+          <p>科普：</p>
 <ol>
-<li>图片水印：</li>
+<li><a href="https://semver.org/lang/zh-CN/" target="_blank" rel="noopener">语义化版本号</a></li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i source.mp4 -i 011.jpg -filter_complex <span class="string">"overlay=x='if(gte(t,2),NAN,10)':y=0[out]"</span> -map <span class="string">'[out]'</span> out.mp4</span><br></pre></td></tr></table></figure>
-<ol>
-<li>文字水印    </li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i source.mp4 -vf <span class="string">"drawtext=fontfile=/Library/Fonts/AdobeHeitiStd-Regular.otf:text='watermark测试':x=30:y=h-30:enable='if(gte(t,3),0,1)':fontsize=24:fontcolor=red@0.7"</span> output.mp4</span><br></pre></td></tr></table></figure>
-<p>附： mac 下 <a href="https://trac.ffmpeg.org/wiki/CompilationGuide/macOS" target="_blank" rel="noopener">安装 FFmpeg</a>，其中文字水印需要 –with-freetype</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">brew install ffmpeg \    </span><br><span class="line">    --with-tools \    </span><br><span class="line">    --with-fdk-aac \  </span><br><span class="line">    --with-freetype \   </span><br><span class="line">    --with-fontconfig \   </span><br><span class="line">    --with-libass \   </span><br><span class="line">    --with-libvorbis \  </span><br><span class="line">    --with-libvpx \  </span><br><span class="line">    --with-opus \  </span><br><span class="line">    --with-x265</span><br></pre></td></tr></table></figure>
-<p>或者 <a href="https://gist.github.com/clayton/6196167" target="_blank" rel="noopener">一个比较全的例子</a></p>
 
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/ffmpeg/" rel="tag"># ffmpeg</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/03/22/reset-gitlab-user-password-through-terminal/" rel="next" title="reset-gitlab-user-password-through-terminal">
-                <i class="fa fa-chevron-left"></i> reset-gitlab-user-password-through-terminal
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -423,17 +303,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -500,22 +371,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用-FFmpeg-给视频添加水印"><span class="nav-number">1.</span> <span class="nav-text">使用 FFmpeg 给视频添加水印</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
