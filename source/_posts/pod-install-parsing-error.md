@@ -1,7 +1,9 @@
 ---
-title: Pod install/update 时 parsing error 的处理
+title: gRPC Pod install/update 时 parsing error 的处理
 date: 2018-03-28 16:44:41
-tags: CocoaPods
+tags: 
+    - CocoaPods
+    - iOS
 ---
 
  **Update: 这个问题已经在 CodoaPods v1.5.0 中修复，见[这个 PR](https://github.com/CocoaPods/Core/pull/438)。**
