@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="GitLab," />
+  <meta name="keywords" content="Hexo, blog" />
 
 
 
@@ -79,18 +79,13 @@
 
 
 
-<meta name="description" content="公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:docker exec -it 9ef">
-<meta name="keywords" content="GitLab">
-<meta property="og:type" content="article">
-<meta property="og:title" content="通过命令行重置 GitLab 用户密码">
-<meta property="og:url" content="http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="手艺人">
+<meta property="og:url" content="http://imqsc.xyz/tags/fastlane/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:docker exec -it 9ef">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-13T08:09:43.799Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通过命令行重置 GitLab 用户密码">
-<meta name="twitter:description" content="公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:docker exec -it 9ef">
+<meta name="twitter:title" content="手艺人">
 
 
 
@@ -120,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/"/>
+  <link rel="canonical" href="http://imqsc.xyz/tags/fastlane/"/>
 
 
 
 
 
-  <title>通过命令行重置 GitLab 用户密码 | 手艺人</title>
+  <title>标签: fastlane | 手艺人</title>
   
 
 
@@ -145,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,165 +234,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>fastlane<small>标签</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="脑补大王">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="手艺人">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">通过命令行重置 GitLab 用户密码</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/05/14/create-fastlane-action/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">给 fastlane 添加自定义 action</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T10:01:41+08:00">
-                2018-03-22
-              </time>
-            
+            </a>
+        
+      </h2>
 
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-05-14T14:33:19+08:00"
+              content="2018-05-14" >
+          05-14
+        </time>
+      </div>
 
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：</p>
-<ol>
-<li><p>找到 GitLab 的 container:<br>  <code>docker ps</code></p>
-<blockquote>
-<p><code>9ef8c21caba5        sameersbn/gitlab:10.1.4</code></p>
-</blockquote>
-</li>
-<li><p>进入 GitLab console:<br><code>docker exec -it 9ef8c21caba5 /bin/bash</code></p>
-<blockquote>
-<p><code>root@9ef8c21caba5:/home/git/gitlab#</code></p>
-</blockquote>
-</li>
-<li><p>进入 rails console:<br><code>sudo -u git -H bundle exec rails console production</code></p>
-<p> 执行以下命令：</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  user=User.find_by(email: <span class="string">'name@mail.host'</span>)</span><br><span class="line">或者：user = User.find(1) <span class="comment"># 使用 userID 查询</span></span><br><span class="line"></span><br><span class="line">  user.password=<span class="string">'new_password'</span></span><br><span class="line">user.password_confirmation=<span class="string">'new_password'</span></span><br><span class="line"></span><br><span class="line">user.save</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>---
-附： 给用户添加管理员角色：`user.admin=true`
-</code></pre>
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/GitLab/" rel="tag"># GitLab</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/28/pod-install-parsing-error/" rel="prev" title="gRPC Pod install/update 时 parsing error 的处理">
-                gRPC Pod install/update 时 parsing error 的处理 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -405,10 +289,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -630,10 +510,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 

@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="GitLab," />
+  <meta name="keywords" content="fastlane," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:docker exec -it 9ef">
-<meta name="keywords" content="GitLab">
+<meta name="description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
+<meta name="keywords" content="fastlane">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通过命令行重置 GitLab 用户密码">
-<meta property="og:url" content="http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/index.html">
+<meta property="og:title" content="给 fastlane 添加自定义 action">
+<meta property="og:url" content="http://imqsc.xyz/2018/05/14/create-fastlane-action/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:docker exec -it 9ef">
+<meta property="og:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-13T08:09:43.799Z">
+<meta property="og:updated_time" content="2018-05-14T07:49:38.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通过命令行重置 GitLab 用户密码">
-<meta name="twitter:description" content="公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：  找到 GitLab 的 container:  docker ps  9ef8c21caba5        sameersbn/gitlab:10.1.4   进入 GitLab console:docker exec -it 9ef">
+<meta name="twitter:title" content="给 fastlane 添加自定义 action">
+<meta name="twitter:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/"/>
+  <link rel="canonical" href="http://imqsc.xyz/2018/05/14/create-fastlane-action/"/>
 
 
 
 
 
-  <title>通过命令行重置 GitLab 用户密码 | 手艺人</title>
+  <title>给 fastlane 添加自定义 action | 手艺人</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/">
+    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/05/14/create-fastlane-action/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="脑补大王">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">通过命令行重置 GitLab 用户密码</h1>
+          <h1 class="post-title" itemprop="name headline">给 fastlane 添加自定义 action</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-22T10:01:41+08:00">
-                2018-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-14T14:33:19+08:00">
+                2018-05-14
               </time>
             
 
@@ -320,26 +320,27 @@
       
 
       
-        <p>公司内部使用 Docker 部署了 GitLab, 有同事忘记密码，恰好邮件发送服务暂时失效，所以查了下使用命令行重置 GitLab 用户密码的方法，记录如下：</p>
-<ol>
-<li><p>找到 GitLab 的 container:<br>  <code>docker ps</code></p>
-<blockquote>
-<p><code>9ef8c21caba5        sameersbn/gitlab:10.1.4</code></p>
-</blockquote>
-</li>
-<li><p>进入 GitLab console:<br><code>docker exec -it 9ef8c21caba5 /bin/bash</code></p>
-<blockquote>
-<p><code>root@9ef8c21caba5:/home/git/gitlab#</code></p>
-</blockquote>
-</li>
-<li><p>进入 rails console:<br><code>sudo -u git -H bundle exec rails console production</code></p>
-<p> 执行以下命令：</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  user=User.find_by(email: <span class="string">'name@mail.host'</span>)</span><br><span class="line">或者：user = User.find(1) <span class="comment"># 使用 userID 查询</span></span><br><span class="line"></span><br><span class="line">  user.password=<span class="string">'new_password'</span></span><br><span class="line">user.password_confirmation=<span class="string">'new_password'</span></span><br><span class="line"></span><br><span class="line">user.save</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>---
-附： 给用户添加管理员角色：`user.admin=true`
-</code></pre>
+        <p>最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。<br>之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。</p>
+<p>这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。</p>
+<h2 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h2><p>一开始想的是，写个脚本改 xcodeproj 的内容。  </p>
+<p>由于 xcodeproj 的结构看起来很混乱，各种 uuid 互相关联。<br>这里就想到使用 CocoaPods 提供的 <a href="https://github.com/CocoaPods/Xcodeproj" target="_blank" rel="noopener">Xcodeproj</a> 库来做。</p>
+<p>经过一番尝试和努力，写出了一个脚本</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">'xcodeproj'</span></span><br><span class="line"></span><br><span class="line">project = Xcodeproj::Project.open(project_path)</span><br><span class="line">specificed_target = params[<span class="symbol">:target</span>]</span><br><span class="line">target = project.targets.first</span><br><span class="line"></span><br><span class="line">attributes = project.root_object.attributes[<span class="string">'TargetAttributes'</span>]</span><br><span class="line">target_attributes = attributes[target.uuid]</span><br><span class="line">system_capabilities = target_attributes[<span class="string">'SystemCapabilities'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> system_capabilities.<span class="keyword">class</span> == Hash</span><br><span class="line">    system_capabilities.delete(<span class="string">'com.apple.Push'</span>)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">target.build_configurations.each <span class="keyword">do</span> <span class="params">|item|</span></span><br><span class="line">    <span class="comment"># just remove the entitlements config from code sign</span></span><br><span class="line">    item.build_settings[<span class="string">'CODE_SIGN_ENTITLEMENTS'</span>] = <span class="string">""</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">project.save()</span><br></pre></td></tr></table></figure>
+<p>这个脚本可以完成任务。但是总感觉不够好。翻了下 fastlane 的文档，看到了<a href="https://docs.fastlane.tools/plugins/create-plugin/#local-actions" target="_blank" rel="noopener">local-action</a></p>
+<h2 id="一-Local-Action"><a href="#一-Local-Action" class="headerlink" title="一. Local Action"></a>一. Local Action</h2><p>fastlane 官方提供了 local-action 的简要说明, 参照 github 中的<a href="https://github.com/fastlane/fastlane/blob/master/fastlane/actions/test_sample_code.rb" target="_blank" rel="noopener">示例</a>，</p>
+<p>给脚本加了 module, class 并放到项目 <code>fastlane/actions</code> 目录下,<br>命名为 <code>disable_push_notifications.rb</code>. </p>
+<p>Well Done! </p>
+<p>我们只要在想关闭推送的 lane 中，加入一行 <code>disable_push_notifications</code> 即可。</p>
+<p>更进一步，如果我有多个 xcodeproj 或 target 呢？</p>
+<p>那就加几个可选参数吧~ 最终完成的文件见<a href="https://github.com/tgz/fastlane-plugin-disable_push_nogifications/blob/master/lib/fastlane/plugin/disable_push_notifications/actions/disable_push_notifications_action.rb" target="_blank" rel="noopener">这里</a></p>
+<p>在使用时，也可以 <code>disable_push_notifications(xcodeproj: your.xcodeproj, target: enterprise)</code> 设定相应的 project 文件和 target.</p>
+<h2 id="二-写一个插件"><a href="#二-写一个插件" class="headerlink" title="二. 写一个插件"></a>二. 写一个插件</h2><p>在看 local action 的文档时，看到了 fastlane 有说明如何自己实现一个<a href="https://docs.fastlane.tools/plugins/create-plugin/#create-your-own-plugin" target="_blank" rel="noopener">插件</a>。</p>
+<p>那就来试一把吧！</p>
+<p>执行 <code>fastlane new_plugin disable_push_notifications</code>, fastlane 自动帮我们生成了一个插件的目录结构。<br>观察一番，只要把我们刚才实现的 action 的内容放到插件自动生成的 ruby 文件中即可。</p>
+<p>最后实现的插件，见<a href="https://github.com/tgz/fastlane-plugin-disable_push_nogifications" target="_blank" rel="noopener">这个仓库</a></p>
+<p>我这个需求由于很小众，就没有发布到 <a href="https://rubygems.org/" target="_blank" rel="noopener">rubygems.org</a>.</p>
+<p>如果有需求，建议还是使用 local action 的形式来做。毕竟只要加一个文件在项目中，简单又方便。</p>
+
       
     </div>
     
@@ -356,7 +357,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GitLab/" rel="tag"># GitLab</a>
+            <a href="/tags/fastlane/" rel="tag"># fastlane</a>
           
         </div>
       
@@ -369,15 +370,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/08/xcrun-error-locate-sdk/" rel="next" title="xcrun error SDK "xx" cannot be locateed 解决">
+                <i class="fa fa-chevron-left"></i> xcrun error SDK "xx" cannot be locateed 解决
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/28/pod-install-parsing-error/" rel="prev" title="gRPC Pod install/update 时 parsing error 的处理">
-                gRPC Pod install/update 时 parsing error 的处理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -429,8 +430,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -497,6 +507,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#First-Step"><span class="nav-number">1.</span> <span class="nav-text">First Step</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-Local-Action"><span class="nav-number">2.</span> <span class="nav-text">一. Local Action</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-写一个插件"><span class="nav-number">3.</span> <span class="nav-text">二. 写一个插件</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
