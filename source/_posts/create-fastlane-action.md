@@ -2,6 +2,7 @@
 title: 给 fastlane 添加自定义 action
 date: 2018-05-14 14:33:19
 tags: fastlane
+keywords: fastlane disable push notifications
 ---
 
 最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。  
