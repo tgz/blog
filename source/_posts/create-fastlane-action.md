@@ -41,7 +41,7 @@ project.save()
 
 ```
 
-这个脚本可以完成任务。但是总感觉不够好。翻了下 fastlane 的文档，看到了[local-action](https://docs.fastlane.tools/plugins/create-plugin/#local-actions)
+这个脚本可以完成任务。但是总感觉不够好。在写脚本时翻 fastlane 的文档，看到了[local-action](https://docs.fastlane.tools/plugins/create-plugin/#local-actions)，这不正是我想要的么！
 
 ## 一. Local Action
 
@@ -75,3 +75,6 @@ Well Done!
 我这个需求由于很小众，就没有发布到 [rubygems.org](https://rubygems.org/).
 
 如果有需求，建议还是使用 local action 的形式来做。毕竟只要加一个文件在项目中，简单又方便。
+
+
+
