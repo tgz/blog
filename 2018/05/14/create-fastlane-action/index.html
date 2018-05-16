@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="fastlane," />
+  <meta name="keywords" content="fastlane disable push notifications" />
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
-<meta name="keywords" content="fastlane">
+<meta name="keywords" content="fastlane disable push notifications">
 <meta property="og:type" content="article">
 <meta property="og:title" content="给 fastlane 添加自定义 action">
 <meta property="og:url" content="http://imqsc.xyz/2018/05/14/create-fastlane-action/index.html">
 <meta property="og:site_name" content="手艺人">
 <meta property="og:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-14T09:25:22.582Z">
+<meta property="og:updated_time" content="2018-05-16T01:43:59.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="给 fastlane 添加自定义 action">
 <meta name="twitter:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
@@ -228,7 +228,11 @@
   
 </nav>
 
-
+<% if (page.keywords){ %>
+<meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+<% } else if (config.keywords){ %>
+<meta name="keywords" content="<%= config.keywords %>">
+<%} %>
 
  </div>
     </header>
