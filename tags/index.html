@@ -132,6 +132,12 @@
 
 
 
+  <% if (page.keywords){ %>
+  <meta name="keywords" content="<%= page.keywords %>,<%= config.keywords %>">
+  <% } else if (config.keywords){ %>
+  <meta name="keywords" content="<%= config.keywords %>">
+  <%} %>
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
