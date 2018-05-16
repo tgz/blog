@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
+<meta name="description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 因此，需要在打包步骤来关闭项目的 Push notifications 开关。 First Step">
 <meta name="keywords" content="fastlane disable push notifications">
 <meta property="og:type" content="article">
 <meta property="og:title" content="给 fastlane 添加自定义 action">
 <meta property="og:url" content="http://imqsc.xyz/2018/05/14/create-fastlane-action/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
+<meta property="og:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 因此，需要在打包步骤来关闭项目的 Push notifications 开关。 First Step">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-16T01:43:59.685Z">
+<meta property="og:updated_time" content="2018-05-16T12:33:07.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="给 fastlane 添加自定义 action">
-<meta name="twitter:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 First Step一开始想的是，写个脚本改 xcodeproj 的内容。   由于 xcodep">
+<meta name="twitter:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 因此，需要在打包步骤来关闭项目的 Push notifications 开关。 First Step">
 
 
 
@@ -325,6 +325,7 @@
       
         <p>最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。<br>之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。</p>
 <p>这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。</p>
+<p>因此，需要在打包步骤来关闭项目的 <code>Push notifications</code> 开关。</p>
 <h2 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h2><p>一开始想的是，写个脚本改 xcodeproj 的内容。  </p>
 <p>由于 xcodeproj 的结构看起来很混乱，各种 uuid 互相关联。<br>这里就想到使用 CocoaPods 提供的 <a href="https://github.com/CocoaPods/Xcodeproj" target="_blank" rel="noopener">Xcodeproj</a> 库来做。</p>
 <p>经过一番尝试和努力，写出了一个脚本</p>
