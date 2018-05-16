@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="升级至 Xcode9 后，有人在使用 ffmpeg 时遇到编译错误，关键报错为： 1xcrun: error: SDK &amp;quot;iphoneos&amp;quot; cannot be located 很显然，xcrun 找不到 sdk 了。验证： 123456xcrun -k --sdk iphoneos --show-sdk-path#输出：xcrun: error: SDK &amp;quot;ipho">
+<meta name="description" content="升级至 Xcode9 后，有人在使用 ffmpeg 时遇到编译错误，关键报错为： 1xcrun: error: SDK &amp;quot;iphoneos&amp;quot; cannot be located 很显然，xcrun 找不到 sdk 了。验证一下： 123456xcrun -k --sdk iphoneos --show-sdk-path#输出：xcrun: error: SDK &amp;quot;ip">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="xcrun error SDK &quot;xx&quot; cannot be locateed 解决">
 <meta property="og:url" content="http://imqsc.xyz/2018/05/08/xcrun-error-locate-sdk/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="升级至 Xcode9 后，有人在使用 ffmpeg 时遇到编译错误，关键报错为： 1xcrun: error: SDK &amp;quot;iphoneos&amp;quot; cannot be located 很显然，xcrun 找不到 sdk 了。验证： 123456xcrun -k --sdk iphoneos --show-sdk-path#输出：xcrun: error: SDK &amp;quot;ipho">
+<meta property="og:description" content="升级至 Xcode9 后，有人在使用 ffmpeg 时遇到编译错误，关键报错为： 1xcrun: error: SDK &amp;quot;iphoneos&amp;quot; cannot be located 很显然，xcrun 找不到 sdk 了。验证一下： 123456xcrun -k --sdk iphoneos --show-sdk-path#输出：xcrun: error: SDK &amp;quot;ip">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-08T09:29:53.596Z">
+<meta property="og:updated_time" content="2018-05-16T12:42:12.996Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xcrun error SDK &quot;xx&quot; cannot be locateed 解决">
-<meta name="twitter:description" content="升级至 Xcode9 后，有人在使用 ffmpeg 时遇到编译错误，关键报错为： 1xcrun: error: SDK &amp;quot;iphoneos&amp;quot; cannot be located 很显然，xcrun 找不到 sdk 了。验证： 123456xcrun -k --sdk iphoneos --show-sdk-path#输出：xcrun: error: SDK &amp;quot;ipho">
+<meta name="twitter:description" content="升级至 Xcode9 后，有人在使用 ffmpeg 时遇到编译错误，关键报错为： 1xcrun: error: SDK &amp;quot;iphoneos&amp;quot; cannot be located 很显然，xcrun 找不到 sdk 了。验证一下： 123456xcrun -k --sdk iphoneos --show-sdk-path#输出：xcrun: error: SDK &amp;quot;ip">
 
 
 
@@ -323,7 +323,7 @@
       
         <p>升级至 Xcode9 后，有人在使用 ffmpeg 时遇到编译错误，关键报错为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun: error: SDK &quot;iphoneos&quot; cannot be located</span><br></pre></td></tr></table></figure>
-<p>很显然，xcrun 找不到 sdk 了。<br>验证：</p>
+<p>很显然，xcrun 找不到 sdk 了。<br>验证一下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xcrun -k --sdk iphoneos --show-sdk-path</span><br><span class="line"></span><br><span class="line">#输出：</span><br><span class="line">xcrun: error: SDK &quot;iphoneos&quot; cannot be located</span><br><span class="line">xcrun: error: SDK &quot;iphoneos&quot; cannot be located</span><br><span class="line">xcrun: error: unable to lookup item &apos;Path&apos; in SDK &apos;iphoneos&apos;</span><br></pre></td></tr></table></figure>
 <p>解决起来很简单,执行以下命令即可修复：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo xcode-select --switch /Applications/Xcode.app</span><br></pre></td></tr></table></figure>
