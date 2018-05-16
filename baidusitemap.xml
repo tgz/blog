@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/05/14/create-fastlane-action/</loc>
+    <lastmod>2018-05-14T09:25:22.582Z</lastmod>
+    <data>
+        <display>
+        <title>给 fastlane 添加自定义 action</title>
+        <pubTime>2018-05-14T06:33:19.000Z</pubTime>
+        
+        <tag>fastlane</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/03/28/pod-install-parsing-error/</loc>
+    <lastmod>2018-05-08T09:34:32.891Z</lastmod>
+    <data>
+        <display>
+        <title>gRPC Pod install/update 时 parsing error 的处理</title>
+        <pubTime>2018-03-28T08:44:41.000Z</pubTime>
+        
+        <tag>CocoaPods</tag>
+         
+        <tag>iOS</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/05/08/xcrun-error-locate-sdk/</loc>
+    <lastmod>2018-05-08T09:29:53.596Z</lastmod>
+    <data>
+        <display>
+        <title>xcrun error SDK "xx" cannot be locateed 解决</title>
+        <pubTime>2018-05-08T09:21:46.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
+    <lastmod>2018-04-24T02:44:04.076Z</lastmod>
+    <data>
+        <display>
+        <title>GPUImage 中的曲线滤镜</title>
+        <pubTime>2018-04-24T00:35:34.000Z</pubTime>
+        
+        <tag>GPUImage</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/04/13/ubuntu-l2tp/</loc>
+    <lastmod>2018-04-13T08:25:52.702Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu L2TP 配置</title>
+        <pubTime>2018-04-13T08:19:58.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/04/13/macos-manage/</loc>
+    <lastmod>2018-04-13T08:18:51.007Z</lastmod>
+    <data>
+        <display>
+        <title>mac 管理</title>
+        <pubTime>2018-04-13T08:12:42.000Z</pubTime>
+        
+        <tag>macos</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
+    <lastmod>2018-04-13T08:09:43.799Z</lastmod>
+    <data>
+        <display>
+        <title>通过命令行重置 GitLab 用户密码</title>
+        <pubTime>2018-03-22T02:01:41.000Z</pubTime>
+        
+        <tag>GitLab</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
+    <lastmod>2018-04-13T08:08:04.387Z</lastmod>
+    <data>
+        <display>
+        <title>使用 FFmpeg 给视频添加水印</title>
+        <pubTime>2018-03-28T10:08:55.000Z</pubTime>
+        
+        <tag>ffmpeg</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
