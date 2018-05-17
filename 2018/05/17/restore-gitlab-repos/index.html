@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="imqsc" />
+  <meta name="keywords" content="gitlab 恢复" />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="手艺人">
-<meta property="og:url" content="http://imqsc.xyz/archives/2018/05/index.html">
+<meta name="description" content="小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。  首先查看 gitlab 的 docker-coompose.yml 设置，定位 gitlab 的存储在什么位置。 进入 gitlab data 的实际存储文件夹：/srv/docker/gitlab/gitlab 这里能看到有 backups 文件夹  解压备份：  1tar xvf 15">
+<meta name="keywords" content="gitlab 恢复">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gitlab 批量恢复被删除的 repo">
+<meta property="og:url" content="http://imqsc.xyz/2018/05/17/restore-gitlab-repos/index.html">
 <meta property="og:site_name" content="手艺人">
+<meta property="og:description" content="小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。  首先查看 gitlab 的 docker-coompose.yml 设置，定位 gitlab 的存储在什么位置。 进入 gitlab data 的实际存储文件夹：/srv/docker/gitlab/gitlab 这里能看到有 backups 文件夹  解压备份：  1tar xvf 15">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-17T12:54:22.910Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="手艺人">
+<meta name="twitter:title" content="gitlab 批量恢复被删除的 repo">
+<meta name="twitter:description" content="小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。  首先查看 gitlab 的 docker-coompose.yml 设置，定位 gitlab 的存储在什么位置。 进入 gitlab data 的实际存储文件夹：/srv/docker/gitlab/gitlab 这里能看到有 backups 文件夹  解压备份：  1tar xvf 15">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://imqsc.xyz/archives/2018/05/"/>
+  <link rel="canonical" href="http://imqsc.xyz/2018/05/17/restore-gitlab-repos/"/>
 
 
 
 
 
-  <title>归档 | 手艺人</title>
+  <title>gitlab 批量恢复被删除的 repo | 手艺人</title>
   
 
 
@@ -131,6 +136,8 @@
 
 
 
+  
+    <meta name="keywords" content="gitlab 恢复">
   
 
 </head>
@@ -142,7 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,148 +242,167 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/05/17/restore-gitlab-repos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="脑补大王">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="手艺人">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h2 class="post-title" itemprop="name headline">gitlab 批量恢复被删除的 repo</h2>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T20:53:17+08:00">
+                2018-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h2 class="archive-year" id="archive-year-2018">2018</h2>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/17/restore-gitlab-repos/" itemprop="url">
-              
-                <span itemprop="name">gitlab 批量恢复被删除的 repo</span>
-              
-            </a>
-        
-      </h3>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-17T20:53:17+08:00"
-              content="2018-05-17" >
-          05-17
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/14/create-fastlane-action/" itemprop="url">
-              
-                <span itemprop="name">给 fastlane 添加自定义 action</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-14T14:33:19+08:00"
-              content="2018-05-14" >
-          05-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/08/xcrun-error-locate-sdk/" itemprop="url">
-              
-                <span itemprop="name">xcrun error SDK "xx" cannot be locateed 解决</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-08T17:21:46+08:00"
-              content="2018-05-08" >
-          05-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。</p>
+<ol>
+<li>首先查看 gitlab 的 docker-coompose.yml 设置，定位 gitlab 的存储在什么位置。</li>
+<li>进入 gitlab data 的实际存储文件夹：<br><code>/srv/docker/gitlab/gitlab</code></li>
+<li><p>这里能看到有 backups 文件夹</p>
+<p> 解压备份：</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf 1526230868_2018_05_13_10.1.4_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入发现能看到 gitlab 的每日备份，将昨日的备份解压<br>进入 repositories 能看到以各 group 名为称的文件夹<br> 进入想恢复的 group, 能看到所有 repo 的 bundle 文件。<br> 参考：<a href="https://git-scm.com/docs/git-bundle" target="_blank" rel="noopener">git bundle</a> </p>
+</li>
+</ol>
+<ol>
+<li>将需要恢复的 repo 移动到当前 gitlab  repositoris 文件夹内。</li>
+</ol>
+<p>执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `ls`; <span class="keyword">do</span> git <span class="built_in">clone</span> --mirror <span class="variable">$i</span>;<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<p>这个命令便利当前文件夹下的文件，分别执行 <code>clone</code> 命令，将 <code>bundle</code> 解包为 <code>*.git</code></p>
+<p>参考：<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/raketasks/import.md" target="_blank" rel="noopener">gitlab-raketasks-import</a><br>执行 rake 命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u git -H bundle <span class="built_in">exec</span> rake gitlab:import:repos[<span class="string">'/home/git/data/repositories/Backup'</span>] RAILS_ENV=production</span><br></pre></td></tr></table></figure>
+<p>这句话会遍历指定的文件下的所有 <code>*.git</code>,导入到 gitlab 的数据库内。</p>
+<p>至此，恢复完成。</p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/GitLab/" rel="tag"># GitLab</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/14/create-fastlane-action/" rel="next" title="给 fastlane 添加自定义 action">
+                <i class="fa fa-chevron-left"></i> 给 fastlane 添加自定义 action
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -384,6 +410,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -605,6 +635,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

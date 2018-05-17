@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
+    <lastmod>2018-05-17T12:54:22.910Z</lastmod>
+    <data>
+        <display>
+        <title>gitlab 批量恢复被删除的 repo</title>
+        <pubTime>2018-05-17T12:53:17.000Z</pubTime>
+        
+        <tag>GitLab</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://imqsc.xyz/2018/05/08/xcrun-error-locate-sdk/</loc>
     <lastmod>2018-05-16T12:42:12.996Z</lastmod>
     <data>
@@ -46,9 +63,9 @@
         <title>gRPC Pod install/update 时 parsing error 的处理</title>
         <pubTime>2018-03-28T08:44:41.000Z</pubTime>
         
-        <tag>iOS</tag>
-         
         <tag>CocoaPods</tag>
+         
+        <tag>iOS</tag>
          
          
            
