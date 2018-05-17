@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
+    
+    <lastmod>2018-05-17T13:04:47.574Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
     
     <lastmod>2018-05-17T12:54:22.910Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
     
     <lastmod>2018-04-13T08:09:43.799Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
-    
-    <lastmod>2018-04-13T08:08:04.387Z</lastmod>
     
   </url>
   
