@@ -5,13 +5,30 @@
     
   <url>
     <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
-    <lastmod>2018-05-17T13:04:47.574Z</lastmod>
+    <lastmod>2018-05-17T13:06:22.514Z</lastmod>
     <data>
         <display>
         <title>使用 FFmpeg 给视频添加水印</title>
         <pubTime>2018-03-28T10:08:55.000Z</pubTime>
         
         <tag>ffmpeg</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
+    <lastmod>2018-05-17T13:06:03.416Z</lastmod>
+    <data>
+        <display>
+        <title>GPUImage 中的曲线滤镜</title>
+        <pubTime>2018-04-24T00:35:34.000Z</pubTime>
+        
+        <tag>GPUImage</tag>
          
          
            
@@ -91,23 +108,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
-    <lastmod>2018-04-24T02:44:04.076Z</lastmod>
-    <data>
-        <display>
-        <title>GPUImage 中的曲线滤镜</title>
-        <pubTime>2018-04-24T00:35:34.000Z</pubTime>
-        
-        <tag>GPUImage</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://imqsc.xyz/2018/04/13/ubuntu-l2tp/</loc>
