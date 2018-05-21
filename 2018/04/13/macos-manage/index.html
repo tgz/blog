@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="忘记密码的处理方案1: cmd + s 开启，进入 single-user 模式 在:/ root#下 执行　mount -uaw / 执行 rm /var/db/.AppleSetupDone reboot 重启，设置一个新用户 设置—用户和群组—重设老用户的密码  方案2: 开机按住 cmd + r，进入Recovery（恢复），实用工具-终端-输入 resetpassword 修改密码 制作">
+<meta name="description" content="忘记密码的处理方案1: cmd + s 开启，进入 single-user 模式 在:/ root#下 执行　mount -uaw / 执行 rm /var/db/.AppleSetupDone reboot 重启，设置一个新用户 设置—用户和群组—重设老用户的密码  方案2:开机按住 cmd + r，进入Recovery（恢复），实用工具-终端-输入 resetpassword  随后会弹出密码">
 <meta name="keywords" content="macos">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mac 管理">
 <meta property="og:url" content="http://imqsc.xyz/2018/04/13/macos-manage/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="忘记密码的处理方案1: cmd + s 开启，进入 single-user 模式 在:/ root#下 执行　mount -uaw / 执行 rm /var/db/.AppleSetupDone reboot 重启，设置一个新用户 设置—用户和群组—重设老用户的密码  方案2: 开机按住 cmd + r，进入Recovery（恢复），实用工具-终端-输入 resetpassword 修改密码 制作">
+<meta property="og:description" content="忘记密码的处理方案1: cmd + s 开启，进入 single-user 模式 在:/ root#下 执行　mount -uaw / 执行 rm /var/db/.AppleSetupDone reboot 重启，设置一个新用户 设置—用户和群组—重设老用户的密码  方案2:开机按住 cmd + r，进入Recovery（恢复），实用工具-终端-输入 resetpassword  随后会弹出密码">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-21T01:44:29.664Z">
+<meta property="og:updated_time" content="2018-05-21T02:04:06.475Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac 管理">
-<meta name="twitter:description" content="忘记密码的处理方案1: cmd + s 开启，进入 single-user 模式 在:/ root#下 执行　mount -uaw / 执行 rm /var/db/.AppleSetupDone reboot 重启，设置一个新用户 设置—用户和群组—重设老用户的密码  方案2: 开机按住 cmd + r，进入Recovery（恢复），实用工具-终端-输入 resetpassword 修改密码 制作">
+<meta name="twitter:description" content="忘记密码的处理方案1: cmd + s 开启，进入 single-user 模式 在:/ root#下 执行　mount -uaw / 执行 rm /var/db/.AppleSetupDone reboot 重启，设置一个新用户 设置—用户和群组—重设老用户的密码  方案2:开机按住 cmd + r，进入Recovery（恢复），实用工具-终端-输入 resetpassword  随后会弹出密码">
 
 
 
@@ -328,7 +328,8 @@
 <li><code>reboot</code> 重启，设置一个新用户</li>
 <li>设置—用户和群组—重设老用户的密码</li>
 </ol>
-<h5 id="方案2"><a href="#方案2" class="headerlink" title="方案2:"></a>方案2:</h5><p> 开机按住 cmd + r，进入Recovery（恢复），实用工具-终端-输入 resetpassword 修改密码</p>
+<h5 id="方案2"><a href="#方案2" class="headerlink" title="方案2:"></a>方案2:</h5><p>开机按住 cmd + r，进入Recovery（恢复），实用工具-终端-输入 <code>resetpassword</code></p>
+<p> 随后会弹出密码修改工具，选择对应的用户，直接设置新密码即可。</p>
 <h4 id="制作U盘安装盘："><a href="#制作U盘安装盘：" class="headerlink" title="制作U盘安装盘："></a>制作U盘安装盘：</h4><p>为方便查看拆成多行显示： </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia </span><br><span class="line">--volume /Volumes/Sierra</span><br><span class="line">--applicationpath /Applications/Install\ macOS\ High\ Sierra.app </span><br><span class="line">--nointeraction</span><br></pre></td></tr></table></figure>
 
