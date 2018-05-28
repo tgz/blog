@@ -11,7 +11,7 @@ xcrun: error: SDK "iphoneos" cannot be located
 ```
 
 很显然，xcrun 找不到 sdk 了。
-验证：
+验证一下：
   
 ```
 xcrun -k --sdk iphoneos --show-sdk-path

@@ -10,6 +10,8 @@ keywords: fastlane disable push notifications
 
 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。
 
+因此，希望能在打包步骤来关闭项目的 `Push notifications` 开关。
+
 ## First Step
 一开始想的是，写个脚本改 xcodeproj 的内容。  
 
@@ -22,7 +24,6 @@ keywords: fastlane disable push notifications
 require 'xcodeproj'
 
 project = Xcodeproj::Project.open(project_path)
-specificed_target = params[:target]
 target = project.targets.first
 
 attributes = project.root_object.attributes['TargetAttributes']

@@ -2,6 +2,7 @@
 title: GPUImage 中的曲线滤镜
 date: 2018-04-24 08:35:34
 tags: GPUImage
+keywords: gpuimage 曲线
 ---
 
 前段时间在做滤镜的开发，参考了 GPUImage 中的多种滤镜。在使用过程中，发现 GPUImage 中的 曲线 滤镜和 PS 中略有不同。记录如下。
