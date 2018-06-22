@@ -322,7 +322,7 @@
         
           
           将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。
-1234567sudo groupadd dockersudo gpasswd -a $&#123;USER&#125; dockersudo service docker restartnewgrp - docke
+1234sudo groupadd docker #正常情况下，装完 Docker 此组已经自动创建sudo gpasswd -a $&#123;USER&#125; dockersudo service docke
           ...
           <!--noindex-->
           <div class="post-button text-center">

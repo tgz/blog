@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。 1234567sudo groupadd dockersudo gpasswd -a $&amp;#123;USER&amp;#125; dockersudo service docker restartnewgrp - docker">
+<meta name="description" content="将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。 1234sudo groupadd docker #正常情况下，装完 Docker 此组已经自动创建sudo gpasswd -a $&amp;#123;USER&amp;#125; dockersudo service docker restartnewgrp - docker">
 <meta name="keywords" content="Ubuntu,Docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 下免 root 权限执行 docker 命令">
 <meta property="og:url" content="http://imqsc.xyz/2018/06/22/ubuntu-docker-without-sudo/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。 1234567sudo groupadd dockersudo gpasswd -a $&amp;#123;USER&amp;#125; dockersudo service docker restartnewgrp - docker">
+<meta property="og:description" content="将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。 1234sudo groupadd docker #正常情况下，装完 Docker 此组已经自动创建sudo gpasswd -a $&amp;#123;USER&amp;#125; dockersudo service docker restartnewgrp - docker">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-22T15:04:06.858Z">
+<meta property="og:updated_time" content="2018-06-22T15:05:34.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 下免 root 权限执行 docker 命令">
-<meta name="twitter:description" content="将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。 1234567sudo groupadd dockersudo gpasswd -a $&amp;#123;USER&amp;#125; dockersudo service docker restartnewgrp - docker">
+<meta name="twitter:description" content="将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。 1234sudo groupadd docker #正常情况下，装完 Docker 此组已经自动创建sudo gpasswd -a $&amp;#123;USER&amp;#125; dockersudo service docker restartnewgrp - docker">
 
 
 
@@ -322,7 +322,7 @@
 
       
         <p>将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo groupadd docker</span><br><span class="line"></span><br><span class="line">sudo gpasswd -a <span class="variable">$&#123;USER&#125;</span> docker</span><br><span class="line"></span><br><span class="line">sudo service docker restart</span><br><span class="line"></span><br><span class="line">newgrp - docker</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo groupadd docker <span class="comment">#正常情况下，装完 Docker 此组已经自动创建</span></span><br><span class="line">sudo gpasswd -a <span class="variable">$&#123;USER&#125;</span> docker</span><br><span class="line">sudo service docker restart</span><br><span class="line">newgrp - docker</span><br></pre></td></tr></table></figure>
 
       
     </div>
