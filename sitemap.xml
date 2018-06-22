@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://imqsc.xyz/2018/06/22/ubuntu-docker-without-sudo/</loc>
+    <loc>http://imqsc.xyz/about/index.html</loc>
     
-    <lastmod>2018-06-22T15:05:34.109Z</lastmod>
+    <lastmod>2018-06-22T15:46:09.261Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/about/index.html</loc>
+    <loc>http://imqsc.xyz/about/2018-06-22.html</loc>
     
-    <lastmod>2018-05-28T14:48:54.374Z</lastmod>
+    <lastmod>2018-06-22T15:46:04.173Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://imqsc.xyz/2018/06/22/ubuntu-docker-without-sudo/</loc>
+    
+    <lastmod>2018-06-22T15:05:34.109Z</lastmod>
     
   </url>
   
