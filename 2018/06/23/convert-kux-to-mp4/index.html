@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="gitlab 恢复" />
+  <meta name="keywords" content="imqsc" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。  首先查看 gitlab 的 docker-coompose.yml 设置，定位 gitlab 的存储在什么位置。 进入 gitlab data 的实际存储文件夹：/srv/docker/gitlab/gitlab 这里能看到有 backups 文件夹  解压备份：  1tar xvf 15">
-<meta name="keywords" content="gitlab 恢复">
+<meta name="description" content="kux 是优酷的加密视频文件，对于独播资源客户端是不允许转码的。网上也有一些小工具，有的已经失效了。 在知乎的这个回答中，答主提到使用优酷自带 ffmpeg 来转码，简直不能再完美了。 由于需求不太相同，我这里重新写了一个脚本，将内容保存为 .bat 后，将需要转码的 kux 文件拖动至 bat 文件上，即可在源文件位置生成一份 .mp4 文件  注意：ffmpeg 位置 及使用的线程数按需修改">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gitlab 批量恢复被删除的 repo">
-<meta property="og:url" content="http://imqsc.xyz/2018/05/17/restore-gitlab-repos/index.html">
+<meta property="og:title" content="优酷 kux 文件转码">
+<meta property="og:url" content="http://imqsc.xyz/2018/06/23/convert-kux-to-mp4/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。  首先查看 gitlab 的 docker-coompose.yml 设置，定位 gitlab 的存储在什么位置。 进入 gitlab data 的实际存储文件夹：/srv/docker/gitlab/gitlab 这里能看到有 backups 文件夹  解压备份：  1tar xvf 15">
+<meta property="og:description" content="kux 是优酷的加密视频文件，对于独播资源客户端是不允许转码的。网上也有一些小工具，有的已经失效了。 在知乎的这个回答中，答主提到使用优酷自带 ffmpeg 来转码，简直不能再完美了。 由于需求不太相同，我这里重新写了一个脚本，将内容保存为 .bat 后，将需要转码的 kux 文件拖动至 bat 文件上，即可在源文件位置生成一份 .mp4 文件  注意：ffmpeg 位置 及使用的线程数按需修改">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-18T00:53:47.145Z">
+<meta property="og:updated_time" content="2018-06-23T09:24:12.515Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gitlab 批量恢复被删除的 repo">
-<meta name="twitter:description" content="小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。  首先查看 gitlab 的 docker-coompose.yml 设置，定位 gitlab 的存储在什么位置。 进入 gitlab data 的实际存储文件夹：/srv/docker/gitlab/gitlab 这里能看到有 backups 文件夹  解压备份：  1tar xvf 15">
+<meta name="twitter:title" content="优酷 kux 文件转码">
+<meta name="twitter:description" content="kux 是优酷的加密视频文件，对于独播资源客户端是不允许转码的。网上也有一些小工具，有的已经失效了。 在知乎的这个回答中，答主提到使用优酷自带 ffmpeg 来转码，简直不能再完美了。 由于需求不太相同，我这里重新写了一个脚本，将内容保存为 .bat 后，将需要转码的 kux 文件拖动至 bat 文件上，即可在源文件位置生成一份 .mp4 文件  注意：ffmpeg 位置 及使用的线程数按需修改">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://imqsc.xyz/2018/05/17/restore-gitlab-repos/"/>
+  <link rel="canonical" href="http://imqsc.xyz/2018/06/23/convert-kux-to-mp4/"/>
 
 
 
 
 
-  <title>gitlab 批量恢复被删除的 repo | 手艺人</title>
+  <title>优酷 kux 文件转码 | 手艺人</title>
   
 
 
@@ -136,8 +135,6 @@
 
 
 
-  
-    <meta name="keywords" content="gitlab 恢复">
   
 
 </head>
@@ -256,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/05/17/restore-gitlab-repos/">
+    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/06/23/convert-kux-to-mp4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="脑补大王">
@@ -273,7 +270,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">gitlab 批量恢复被删除的 repo</h2>
+          <h2 class="post-title" itemprop="name headline">优酷 kux 文件转码</h2>
         
 
         <div class="post-meta">
@@ -285,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-17T20:53:17+08:00">
-                2018-05-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-23T17:14:28+08:00">
+                2018-06-23
               </time>
             
 
@@ -323,31 +320,13 @@
       
 
       
-        <p>小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。</p>
-<ol>
-<li>首先查看 gitlab 的 docker-coompose.yml 设置，定位 gitlab 的存储在什么位置。</li>
-<li>进入 gitlab data 的实际存储文件夹：<br><code>/srv/docker/gitlab/gitlab</code></li>
-<li><p>这里能看到有 backups 文件夹</p>
-<p> 解压备份：</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf 1526230868_2018_05_13_10.1.4_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>进入发现能看到 gitlab 的每日备份，将昨日的备份解压   </p>
-</li>
-<li><p>进入 repositories 能看到以各 group 名为称的文件夹，再进入想恢复的 group, 能看到所有 repo 的 bundle 文件。<br> 参考：<a href="https://git-scm.com/docs/git-bundle" target="_blank" rel="noopener">git bundle</a> </p>
-</li>
-</ol>
-<ol>
-<li><p>将需要恢复的 repo 移动到当前 gitlab  repositoris 文件夹内。</p>
-<p> 执行：</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `ls`; <span class="keyword">do</span> git <span class="built_in">clone</span> --mirror <span class="variable">$i</span>;<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
-<p> 这个命令遍历当前文件夹下的文件，分别执行 <code>clone</code> 命令，将 <code>bundle</code> 解包为 <code>*.git</code></p>
-</li>
-<li><p>参考：<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/raketasks/import.md" target="_blank" rel="noopener">gitlab-raketasks-import</a>  执行 rake 命令：</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u git -H bundle <span class="built_in">exec</span> rake gitlab:import:repos[<span class="string">'/home/git/data/repositories/Backup'</span>] RAILS_ENV=production</span><br></pre></td></tr></table></figure>
-<p>这句话会遍历指定的文件下的所有 <code>*.git</code>,导入到 gitlab 的数据库内。</p>
-<p>至此，恢复完成。</p>
+        <p>kux 是优酷的加密视频文件，对于独播资源客户端是不允许转码的。网上也有一些小工具，有的已经失效了。</p>
+<p>在知乎的<a href="https://www.zhihu.com/question/51792949/answer/298412575" target="_blank" rel="noopener">这个回答</a>中，答主提到使用优酷自带 ffmpeg 来转码，简直不能再完美了。</p>
+<p>由于需求不太相同，我这里重新写了一个脚本，将内容保存为 <code>.bat</code> 后，将需要转码的 kux 文件拖动至 bat 文件上，即可在源文件位置生成一份 <code>.mp4</code> 文件</p>
+<blockquote>
+<p>注意：ffmpeg 位置 及使用的线程数按需修改</p>
+</blockquote>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> orig=%<span class="number">1</span></span><br><span class="line"><span class="built_in">set</span> after=<span class="variable">%orig:~0,-5%</span>.mp4"</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> ffmpeg="C:\Program Files (x86)\YouKu\YoukuClient\nplayer\ffmpeg.exe"</span><br><span class="line"></span><br><span class="line"><span class="variable">%ffmpeg%</span> -y -i <span class="variable">%orig%</span> -c:a <span class="built_in">copy</span> -c:v <span class="built_in">copy</span> -threads <span class="number">8</span> <span class="variable">%after%</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -363,12 +342,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/GitLab/" rel="tag"># GitLab</a>
-          
-        </div>
-      
 
       
       
@@ -378,8 +351,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/14/create-fastlane-action/" rel="next" title="给 fastlane 添加自定义 action">
-                <i class="fa fa-chevron-left"></i> 给 fastlane 添加自定义 action
+              <a href="/2018/06/22/ubuntu-docker-without-sudo/" rel="next" title="Ubuntu 下免 root 权限执行 docker 命令">
+                <i class="fa fa-chevron-left"></i> Ubuntu 下免 root 权限执行 docker 命令
               </a>
             
           </div>
@@ -387,10 +360,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/18/build-caffe-with-python/" rel="prev" title="编译 caffe 并在 python 中使用">
-                编译 caffe 并在 python 中使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
