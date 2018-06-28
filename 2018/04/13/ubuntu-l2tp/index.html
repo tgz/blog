@@ -330,6 +330,8 @@
 <li><p>VPN service failed to start</p>
 <blockquote>
 <p>i. VPN Ipsec 设置里，加密算法两行，第一行：<code>3des-sha1-modp1024</code> 第二行 <code>3des-sha1</code>.  (ike-scan)<br><em>这个算法可能通过 ike-scan youer-server 获取</em></p>
+</blockquote>
+<blockquote>
 <p>ii. 检查下是不是安装了 <code>libreswan</code> 库。<code>apt-get remove libreswan</code> 会自动切换到 <code>strongswan</code><br><em><code>libreswan</code> 和 <code>strongswan</code> 不同内核可能需求不一样，我这边有台电脑是这样</em></p>
 </blockquote>
 </li>
@@ -343,7 +345,7 @@
 </blockquote>
 </li>
 </ul>
-<ol>
+<ol start="3">
 <li>资源：<br><a href="https://github.com/nm-l2tp/network-manager-l2tp" target="_blank" rel="noopener">network-manager-l2tp</a></li>
 </ol>
 

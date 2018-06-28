@@ -336,7 +336,7 @@
 <li><p>进入 repositories 能看到以各 group 名为称的文件夹，再进入想恢复的 group, 能看到所有 repo 的 bundle 文件。<br> 参考：<a href="https://git-scm.com/docs/git-bundle" target="_blank" rel="noopener">git bundle</a> </p>
 </li>
 </ol>
-<ol>
+<ol start="6">
 <li><p>将需要恢复的 repo 移动到当前 gitlab  repositoris 文件夹内。</p>
 <p> 执行：</p>
  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `ls`; <span class="keyword">do</span> git <span class="built_in">clone</span> --mirror <span class="variable">$i</span>;<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
