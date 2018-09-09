@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="需求：开发 ReactNative 程序时，使用 VSCode 为主，但是真机调试时，又需要使用 Xcode, 每次两个软件之间切换比较麻烦，这里提供一种方式，可以直接按一个快捷键，自动唤起 Xcode 并执行 「RUN」 这里需要借助苹果自带的 Automator 来做到这件事情。 首先：打开 Automator ,新建服务：  找到 「运行 AppleScript」手动到右侧编辑区，添加以下内">
+<meta name="description" content="开发 ReactNative 程序时，使用 VSCode 为主，但是真机调试时，又需要使用 Xcode, 每次两个软件之间切换比较麻烦，这里提供一种方式，可以直接按一个快捷键，自动唤起 Xcode 并执行 「RUN」 这里需要借助苹果自带的 Automator 来做到这件事情。 首先：打开 Automator ,新建服务：  找到 「运行 AppleScript」拖动到右侧编辑区，添加以下内容：">
 <meta name="keywords" content="Xcode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="给 Xcode 添加全局快捷键">
 <meta property="og:url" content="http://imqsc.xyz/2018/09/09/macos-add-globle-shortcut/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="需求：开发 ReactNative 程序时，使用 VSCode 为主，但是真机调试时，又需要使用 Xcode, 每次两个软件之间切换比较麻烦，这里提供一种方式，可以直接按一个快捷键，自动唤起 Xcode 并执行 「RUN」 这里需要借助苹果自带的 Automator 来做到这件事情。 首先：打开 Automator ,新建服务：  找到 「运行 AppleScript」手动到右侧编辑区，添加以下内">
+<meta property="og:description" content="开发 ReactNative 程序时，使用 VSCode 为主，但是真机调试时，又需要使用 Xcode, 每次两个软件之间切换比较麻烦，这里提供一种方式，可以直接按一个快捷键，自动唤起 Xcode 并执行 「RUN」 这里需要借助苹果自带的 Automator 来做到这件事情。 首先：打开 Automator ,新建服务：  找到 「运行 AppleScript」拖动到右侧编辑区，添加以下内容：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://cctgz.u.qiniudn.com/automator_new_service.jpg">
 <meta property="og:image" content="http://cctgz.u.qiniudn.com/automator-run-script.jpg">
 <meta property="og:image" content="http://cctgz.u.qiniudn.com/service-shortcut.jpg">
-<meta property="og:updated_time" content="2018-09-09T13:48:30.547Z">
+<meta property="og:updated_time" content="2018-09-09T13:50:05.498Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="给 Xcode 添加全局快捷键">
-<meta name="twitter:description" content="需求：开发 ReactNative 程序时，使用 VSCode 为主，但是真机调试时，又需要使用 Xcode, 每次两个软件之间切换比较麻烦，这里提供一种方式，可以直接按一个快捷键，自动唤起 Xcode 并执行 「RUN」 这里需要借助苹果自带的 Automator 来做到这件事情。 首先：打开 Automator ,新建服务：  找到 「运行 AppleScript」手动到右侧编辑区，添加以下内">
+<meta name="twitter:description" content="开发 ReactNative 程序时，使用 VSCode 为主，但是真机调试时，又需要使用 Xcode, 每次两个软件之间切换比较麻烦，这里提供一种方式，可以直接按一个快捷键，自动唤起 Xcode 并执行 「RUN」 这里需要借助苹果自带的 Automator 来做到这件事情。 首先：打开 Automator ,新建服务：  找到 「运行 AppleScript」拖动到右侧编辑区，添加以下内容：">
 <meta name="twitter:image" content="http://cctgz.u.qiniudn.com/automator_new_service.jpg">
 
 
@@ -319,7 +319,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  353
+                  351
                 </span>
               
 
@@ -356,16 +356,16 @@
       
 
       
-        <p>需求：开发 ReactNative 程序时，使用 VSCode 为主，但是真机调试时，又需要使用 Xcode, 每次两个软件之间切换比较麻烦，这里提供一种方式，可以直接按一个快捷键，自动唤起 Xcode 并执行 「RUN」</p>
+        <p>开发 ReactNative 程序时，使用 VSCode 为主，但是真机调试时，又需要使用 Xcode, 每次两个软件之间切换比较麻烦，这里提供一种方式，可以直接按一个快捷键，自动唤起 Xcode 并执行 「RUN」</p>
 <p>这里需要借助苹果自带的 Automator 来做到这件事情。</p>
 <p>首先：打开 Automator ,新建服务：</p>
 <p><img src="http://cctgz.u.qiniudn.com/automator_new_service.jpg" alt="automator_new_service"></p>
-<p>找到 「运行 AppleScript」手动到右侧编辑区，添加以下内容：</p>
+<p>找到 「运行 AppleScript」拖动到右侧编辑区，添加以下内容：</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> <span class="built_in">run</span> &#123;input, parameters&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"Xcode"</span></span><br><span class="line">		<span class="built_in">activate</span></span><br><span class="line">		<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"System Events"</span></span><br><span class="line">			keystroke <span class="string">"r"</span> using command down</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line"><span class="keyword">end</span> <span class="built_in">run</span></span><br></pre></td></tr></table></figure>
-<p>如图所示：<br><img src="http://cctgz.u.qiniudn.com/automator-run-script.jpg" alt=""></p>
 <blockquote>
 <p>AppleScript 的语法不再解释，比较简单明了，我这里使用发送键盘事件的方式达到目的，你也可以操作菜单栏，如有其它需求，自己 google 一下即可。</p>
 </blockquote>
+<p>如图所示：<br><img src="http://cctgz.u.qiniudn.com/automator-run-script.jpg" alt=""></p>
 <p>注意这里服务的输入要选择「没有输入」，位于，我选择的是所有程序，你也可以按需选择。</p>
 <p>完成后，可以点击右侧运行，验证效果。</p>
 <p>验证无误后，保存文件即可。然后到 [系统设置—键盘—快捷键] 内，添加这个服务的全局快捷键即可。</p>
