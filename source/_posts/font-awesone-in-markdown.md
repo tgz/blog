@@ -1,7 +1,7 @@
 ---
 title: Markdown 文档中使用 font awesome
 date: 2018-07-01 17:15:40
-tags:
+tags: markdown
 ---
 
 # Font Awesome 是什么
@@ -44,10 +44,10 @@ Font Awesome 是一个图标库，包含了常见 & 流行的各式 Logo ，它�
 
 # 修改图标尺寸：
 
-###图标 size 会跟随文字：<i class="fab fa-weixin"></i>
+### 图标 size 会跟随文字：<i class="fab fa-weixin"></i>
 
 ```
-###图标 size 会跟随文字：<i class="fab fa-weixin"></i>
+### 图标 size 会跟随文字：<i class="fab fa-weixin"></i>
 ```
 
 

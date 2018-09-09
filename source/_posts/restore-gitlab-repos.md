@@ -2,7 +2,7 @@
 title: gitlab 批量恢复被删除的 repo
 date: 2018-05-17 20:53:17
 tags: GitLab
-keywords: gitlab 恢复
+keywords: GitLab 恢复
 ---
 
 小伙伴本想移动一 repo group. 结果可能点错了，把 group 删除了。这里记录一下恢复的过程。
