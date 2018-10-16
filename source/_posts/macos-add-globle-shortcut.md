@@ -10,7 +10,7 @@ tags: Xcode
 
 首先：打开 Automator ,新建服务：
 
-![automator_new_service](http://cctgz.u.qiniudn.com/automator_new_service.jpg)
+![automator_new_service](http://cdn.imqsc.xyz/automator_new_service.jpg)
 
 找到 「运行 AppleScript」拖动到右侧编辑区，添加以下内容：
 
@@ -29,7 +29,7 @@ end run
 > AppleScript 的语法不再解释，比较简单明了，我这里使用发送键盘事件的方式达到目的，你也可以操作菜单栏，如有其它需求，自己 google 一下即可。
 
 如图所示：
-![](http://cctgz.u.qiniudn.com/automator-run-script.jpg)
+![](http://cdn.imqsc.xyz/automator-run-script.jpg)
 
 注意这里服务的输入要选择「没有输入」，位于，我选择的是所有程序，你也可以按需选择。
 
@@ -38,7 +38,7 @@ end run
 验证无误后，保存文件即可。然后到 [系统设置---键盘---快捷键] 内，添加这个服务的全局快捷键即可。
 
 如下图所示：
-![](http://cctgz.u.qiniudn.com/service-shortcut.jpg)
+![](http://cdn.imqsc.xyz/service-shortcut.jpg)
 
 如上图所示，我保存服务的名称为 [Xcode-Run], 这里就能看到同名的服务，添加自己想设置的快捷键。
 

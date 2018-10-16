@@ -10,10 +10,10 @@ keywords: gpuimage 曲线
 PS 中曲线调整时，如果起始结束点不在 `(0,0),(255,255)` ，则按照一定的规则进行补齐两侧的点
 
 PS 中生成的图如下图
-![PS 补点](http://cctgz.u.qiniudn.com/curve-ps.jpg)
+![PS 补点](http://cdn.imqsc.xyz/curve-ps.jpg)
 
 GPUImage 补齐规则：
-![GPUImage](http://cctgz.u.qiniudn.com/curve-old.jpg)
+![GPUImage](http://cdn.imqsc.xyz/curve-old.jpg)
 
 从图上可以很容易的看出来，PS 的规则为：  
     1. 在起始点前的点，y 值按第一个点的值进行填充。
@@ -94,6 +94,6 @@ if (lastSplinePoint.x < 255) {
 ```
 
 调整后，GPUImage 生成的曲线就和 PS 中保持一致了。
-![new-curve](http://cctgz.u.qiniudn.com/curve-new.jpg)
+![new-curve](http://cdn.imqsc.xyz/curve-new.jpg)
 
 

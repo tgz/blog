@@ -32,7 +32,7 @@ tags: markdown
 <details open>
     <summary>show more</summary>
     This section was in a detail block
-    
+
 </details>
 
 由于是 html 内容，所以不存在兼容性问题  
