@@ -87,14 +87,14 @@
 <meta property="og:site_name" content="手艺人">
 <meta property="og:description" content="前段时间在做滤镜的开发，参考了 GPUImage 中的多种滤镜。在使用过程中，发现 GPUImage 中的 曲线 滤镜和 PS 中略有不同。记录如下。 PS 中曲线调整时，如果起始结束点不在 (0,0),(255,255) ，则按照一定的规则进行补齐两侧的点 PS 中生成的图如下图 GPUImage 补齐规则： 从图上可以很容易的看出来，PS 的规则为：   1. 在起始点前的点，y 值按第一个点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://imqsc.xyz/images/curve-ps.jpg">
-<meta property="og:image" content="http://imqsc.xyz/images/curve-old.jpg">
-<meta property="og:image" content="http://cctgz.u.qiniudn.com/curve-new.jpg">
-<meta property="og:updated_time" content="2018-10-16T06:54:54.071Z">
+<meta property="og:image" content="http://cdn.imqsc.xyz/curve-ps.jpg">
+<meta property="og:image" content="http://cdn.imqsc.xyz/curve-old.jpg">
+<meta property="og:image" content="http://cdn.imqsc.xyz/curve-new.jpg">
+<meta property="og:updated_time" content="2018-10-16T07:16:14.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GPUImage 中的曲线滤镜">
 <meta name="twitter:description" content="前段时间在做滤镜的开发，参考了 GPUImage 中的多种滤镜。在使用过程中，发现 GPUImage 中的 曲线 滤镜和 PS 中略有不同。记录如下。 PS 中曲线调整时，如果起始结束点不在 (0,0),(255,255) ，则按照一定的规则进行补齐两侧的点 PS 中生成的图如下图 GPUImage 补齐规则： 从图上可以很容易的看出来，PS 的规则为：   1. 在起始点前的点，y 值按第一个点">
-<meta name="twitter:image" content="http://imqsc.xyz/images/curve-ps.jpg">
+<meta name="twitter:image" content="http://cdn.imqsc.xyz/curve-ps.jpg">
 
 
 
@@ -360,8 +360,8 @@
       
         <p>前段时间在做滤镜的开发，参考了 GPUImage 中的多种滤镜。在使用过程中，发现 GPUImage 中的 曲线 滤镜和 PS 中略有不同。记录如下。</p>
 <p>PS 中曲线调整时，如果起始结束点不在 <code>(0,0),(255,255)</code> ，则按照一定的规则进行补齐两侧的点</p>
-<p>PS 中生成的图如下图<br><img src="/images/curve-ps.jpg" alt="PS 补点"></p>
-<p>GPUImage 补齐规则：<br><img src="/images/curve-old.jpg" alt="GPUImage"></p>
+<p>PS 中生成的图如下图<br><img src="http://cdn.imqsc.xyz/curve-ps.jpg" alt="PS 补点"></p>
+<p>GPUImage 补齐规则：<br><img src="http://cdn.imqsc.xyz/curve-old.jpg" alt="GPUImage"></p>
 <p>从图上可以很容易的看出来，PS 的规则为：  </p>
 <pre><code>1. 在起始点前的点，y 值按第一个点的值进行填充。
 2. 在结束点后的点，y 值按最后一个点的值进行填充。
@@ -372,7 +372,7 @@
 <p>重点就在于两种情况下构造的 <code>newPoint</code>.<br>我们简单调整，即可将 GPUImage 生成的曲线与 PS 保持一致</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">if</span> (firstSplinePoint.x &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=firstSplinePoint.x; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="built_in">CGPoint</span> newCGPoint = <span class="built_in">CGPointMake</span>(i, firstSplinePoint.y);</span><br><span class="line">        [splinePoints insertObject:[<span class="built_in">NSValue</span> valueWithCGPoint:newCGPoint] atIndex:<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (lastSplinePoint.x &lt; <span class="number">255</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = lastSplinePoint.x + <span class="number">1</span>; i &lt;= <span class="number">255</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">CGPoint</span> newCGPoint = <span class="built_in">CGPointMake</span>(i, lastSplinePoint.y);</span><br><span class="line">        [splinePoints addObject:[<span class="built_in">NSValue</span> valueWithCGPoint:newCGPoint]];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>调整后，GPUImage 生成的曲线就和 PS 中保持一致了。<br><img src="http://cctgz.u.qiniudn.com/curve-new.jpg" alt="new-curve"></p>
+<p>调整后，GPUImage 生成的曲线就和 PS 中保持一致了。<br><img src="http://cdn.imqsc.xyz/curve-new.jpg" alt="new-curve"></p>
 
       
     </div>
