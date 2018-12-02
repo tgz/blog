@@ -141,7 +141,15 @@
 
 
   
-
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?140b14f58adf2f4622c51968beeb1140";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -361,7 +369,7 @@
 <p>首先：打开 Automator ,新建服务：</p>
 <p><img src="http://cdn.imqsc.xyz/automator_new_service.jpg" alt="automator_new_service"></p>
 <p>找到 「运行 AppleScript」拖动到右侧编辑区，添加以下内容：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">on</span> <span class="built_in">run</span> &#123;input, parameters&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"Xcode"</span></span><br><span class="line">		<span class="built_in">activate</span></span><br><span class="line">		<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"System Events"</span></span><br><span class="line">			keystroke <span class="string">"r"</span> using command down</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line"><span class="keyword">end</span> <span class="built_in">run</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">on</span> <span class="hljs-built_in">run</span> &#123;input, parameters&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="hljs-keyword">tell</span> <span class="hljs-built_in">application</span> <span class="hljs-string">"Xcode"</span></span><br><span class="line">		<span class="hljs-built_in">activate</span></span><br><span class="line">		<span class="hljs-keyword">tell</span> <span class="hljs-built_in">application</span> <span class="hljs-string">"System Events"</span></span><br><span class="line">			keystroke <span class="hljs-string">"r"</span> using command down</span><br><span class="line">		<span class="hljs-keyword">end</span> <span class="hljs-keyword">tell</span></span><br><span class="line">	<span class="hljs-keyword">end</span> <span class="hljs-keyword">tell</span></span><br><span class="line"><span class="hljs-keyword">end</span> <span class="hljs-built_in">run</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>AppleScript 的语法不再解释，比较简单明了，我这里使用发送键盘事件的方式达到目的，你也可以操作菜单栏，如有其它需求，自己 google 一下即可。</p>
 </blockquote>
@@ -562,7 +570,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.2k</span>
+    <span title="Site words total count">4.4k</span>
   
 </div>
 

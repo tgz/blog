@@ -137,7 +137,15 @@
 
 
   
-
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?140b14f58adf2f4622c51968beeb1140";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -353,7 +361,7 @@
 
       
         <p>将当前用户加入 docker 组后，重启 docker 并刷新 group 缓存。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo groupadd docker <span class="comment">#正常情况下，装完 Docker 此组已经自动创建</span></span><br><span class="line">sudo gpasswd -a <span class="variable">$&#123;USER&#125;</span> docker</span><br><span class="line">sudo service docker restart</span><br><span class="line">newgrp - docker</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo groupadd docker <span class="hljs-comment">#正常情况下，装完 Docker 此组已经自动创建</span></span><br><span class="line">sudo gpasswd -a <span class="hljs-variable">$&#123;USER&#125;</span> docker</span><br><span class="line">sudo service docker restart</span><br><span class="line">newgrp - docker</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -546,7 +554,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.2k</span>
+    <span title="Site words total count">4.4k</span>
   
 </div>
 

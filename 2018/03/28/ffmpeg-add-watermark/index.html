@@ -139,7 +139,15 @@
   
     <meta name="keywords" content="ffmpeg 水印 时间段">
   
-
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?140b14f58adf2f4622c51968beeb1140";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -356,11 +364,11 @@
       
         <p>接到一条求助：在视频的<strong>前 2 秒</strong>添加水印，想了下最方便的应该是使用 FFMPEG 了。简单捣鼓了一下：</p>
 <p>使用的 FFmpeg 版本：<code>3.4.2</code></p>
-<h4 id="图片水印："><a href="#图片水印：" class="headerlink" title="图片水印："></a>图片水印：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i source.mp4 \</span><br><span class="line">    -i 011.jpg \</span><br><span class="line">    -filter_complex <span class="string">"overlay=x='if(gte(t,2),NAN,10)':y=0[out]"</span> \</span><br><span class="line">    -map <span class="string">'[out]'</span> out.mp4</span><br></pre></td></tr></table></figure>
-<h4 id="文字水印"><a href="#文字水印" class="headerlink" title="文字水印"></a>文字水印</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i source.mp4 \</span><br><span class="line">   -vf <span class="string">"drawtext=fontfile=/Library/Fonts/AdobeHeitiStd-Regular.otf:text='watermark测试':x=30:y=h-30:enable='if(gte(t,3),0,1)':fontsize=24:fontcolor=red@0.7"</span> output.mp4</span><br></pre></td></tr></table></figure>
+<h4 id="图片水印："><a href="#图片水印：" class="headerlink" title="图片水印："></a>图片水印：</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i source.mp4 \</span><br><span class="line">    -i 011.jpg \</span><br><span class="line">    -filter_complex <span class="hljs-string">"overlay=x='if(gte(t,2),NAN,10)':y=0[out]"</span> \</span><br><span class="line">    -map <span class="hljs-string">'[out]'</span> out.mp4</span><br></pre></td></tr></table></figure>
+<h4 id="文字水印"><a href="#文字水印" class="headerlink" title="文字水印"></a>文字水印</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -i source.mp4 \</span><br><span class="line">   -vf <span class="hljs-string">"drawtext=fontfile=/Library/Fonts/AdobeHeitiStd-Regular.otf:text='watermark测试':x=30:y=h-30:enable='if(gte(t,3),0,1)':fontsize=24:fontcolor=red@0.7"</span> output.mp4</span><br></pre></td></tr></table></figure>
 <hr>
 <p>附： mac 下 <a href="https://trac.ffmpeg.org/wiki/CompilationGuide/macOS" target="_blank" rel="noopener">安装 FFmpeg</a>，其中文字水印需要 –with-freetype</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">brew install ffmpeg \    </span><br><span class="line">    --with-tools \    </span><br><span class="line">    --with-fdk-aac \  </span><br><span class="line">    --with-freetype \   </span><br><span class="line">    --with-fontconfig \   </span><br><span class="line">    --with-libass \   </span><br><span class="line">    --with-libvorbis \  </span><br><span class="line">    --with-libvpx \  </span><br><span class="line">    --with-opus \  </span><br><span class="line">    --with-x265</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">brew install ffmpeg \    </span><br><span class="line">    --with-tools \    </span><br><span class="line">    --with-fdk-aac \  </span><br><span class="line">    --with-freetype \   </span><br><span class="line">    --with-fontconfig \   </span><br><span class="line">    --with-libass \   </span><br><span class="line">    --with-libvorbis \  </span><br><span class="line">    --with-libvpx \  </span><br><span class="line">    --with-opus \  </span><br><span class="line">    --with-x265</span><br></pre></td></tr></table></figure>
 <p>或者参考 <a href="https://gist.github.com/clayton/6196167" target="_blank" rel="noopener">一个比较全的安装命令</a></p>
 
       
@@ -577,7 +585,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.2k</span>
+    <span title="Site words total count">4.4k</span>
   
 </div>
 

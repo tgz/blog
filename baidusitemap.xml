@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://imqsc.xyz/2018/04/13/macos-manage/</loc>
+    <lastmod>2018-10-26T03:59:33.168Z</lastmod>
+    <data>
+        <display>
+        <title>mac 管理</title>
+        <pubTime>2018-04-13T08:12:42.000Z</pubTime>
+        
+        <tag>macos</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
     <lastmod>2018-10-16T07:16:14.943Z</lastmod>
     <data>
@@ -159,23 +176,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/04/13/macos-manage/</loc>
-    <lastmod>2018-05-28T14:35:35.005Z</lastmod>
-    <data>
-        <display>
-        <title>mac 管理</title>
-        <pubTime>2018-04-13T08:12:42.000Z</pubTime>
-        
-        <tag>macos</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>

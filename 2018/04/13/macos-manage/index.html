@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="手艺人">
 <meta property="og:description" content="忘记密码的处理方案1: cmd + s 开启，进入 single-user 模式 在:/ root#下 执行　mount -uaw / 执行 rm /var/db/.AppleSetupDone reboot 重启，设置一个新用户 设置—用户和群组—重设老用户的密码  方案2 👍:开机按 cmd + r，进入Recovery（恢复）=&amp;gt; 实用工具-终端-输入 resetpassword">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T14:35:35.005Z">
+<meta property="og:updated_time" content="2018-10-26T03:59:33.168Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac 管理">
 <meta name="twitter:description" content="忘记密码的处理方案1: cmd + s 开启，进入 single-user 模式 在:/ root#下 执行　mount -uaw / 执行 rm /var/db/.AppleSetupDone reboot 重启，设置一个新用户 设置—用户和群组—重设老用户的密码  方案2 👍:开机按 cmd + r，进入Recovery（恢复）=&amp;gt; 实用工具-终端-输入 resetpassword">
@@ -137,7 +137,15 @@
 
 
   
-
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?140b14f58adf2f4622c51968beeb1140";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +323,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  155
+                  372
                 </span>
               
 
@@ -331,7 +339,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -361,8 +369,13 @@
 </ol>
 <h5 id="方案2-👍"><a href="#方案2-👍" class="headerlink" title="方案2 👍:"></a>方案2 👍:</h5><p>开机按 cmd + r，进入Recovery（恢复）=&gt; 实用工具-终端-输入 <code>resetpassword</code></p>
 <p> 随后会弹出密码修改工具，选择对应的用户，直接设置新密码即可。</p>
+<h4 id="如果开启了-FileVault-的处理"><a href="#如果开启了-FileVault-的处理" class="headerlink" title="如果开启了 FileVault 的处理"></a>如果开启了 FileVault 的处理</h4><p>开机 cmd + r =&gt; 实用工具 =&gt; 终端<br>diskutil cs list</p>
+<p>应会显示类似以下内容的列表：<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">-bash-3.2<span class="hljs-comment"># diskutil cs list</span></span><br><span class="line">CoreStorage logical volume groups (1 found)</span><br><span class="line">|</span><br><span class="line">+-- Logical Volume Group 9BDE693D-8B2A-4BB5-B2F2-AB836127C4FA      </span><br><span class="line">【UUID 号】</span><br><span class="line">    =========================================================       </span><br><span class="line">    Name:         Macintosh HD</span><br><span class="line">    Sequence:     1</span><br><span class="line">    Free Space:   0 B (0 B)</span><br><span class="line">    |</span><br><span class="line">    +-&lt; Physical Volume AA2E2185-84C9-4D41-95DB-13235D3BBC8F</span><br><span class="line">    |   ----------------------------------------------------</span><br><span class="line">    |   Index:    0</span><br><span class="line">    |   Disk:     disk0s6</span><br><span class="line">    |   Status:   Online</span><br><span class="line">    |   Size:     29743423488 B (29.7 GB)</span><br><span class="line">    |</span><br><span class="line">    +-&gt; Logical Volume Family 00C419B1-BA2B-4234-8480-6955349B2AF3</span><br><span class="line">        ----------------------------------------------------------</span><br><span class="line">        Sequence:               8</span><br><span class="line">        Encryption Status:      Locked</span><br><span class="line">        Encryption Type:        AES-XTS</span><br><span class="line">        Encryption Context:     Present</span><br><span class="line">        Conversion Status:      Complete</span><br><span class="line">        Has Encrypted Extents:  Yes</span><br><span class="line">        Conversion Direction:   -none-</span><br><span class="line">        |</span><br><span class="line">        +-&gt; Logical Volume 081502ED-C76D-4F4B-8641-6B0B3AD1512B</span><br><span class="line">            ---------------------------------------------------</span><br><span class="line">            Disk:               -none-</span><br><span class="line">            Status:             Locked</span><br><span class="line">            Sequence:           4</span><br><span class="line">            Size (Total):       29424652288 B (29.4 GB)</span><br><span class="line">            Size (Converted):   -none-</span><br><span class="line">            Revertible:         Yes (unlock and decryption required)</span><br><span class="line">            LV Name:            Macintosh HD                    </span><br><span class="line">            Content Hint:       Apple_HFS</span><br></pre></td></tr></table></figure></p>
+<p>记下第一行中的逻辑宗卷组 UUID 号。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil cs delete UUID</span><br></pre></td></tr></table></figure>
+<p>然后便可重装系统 </p>
 <h4 id="制作U盘安装盘："><a href="#制作U盘安装盘：" class="headerlink" title="制作U盘安装盘："></a>制作U盘安装盘：</h4><p>为方便查看拆成多行显示： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia </span><br><span class="line">--volume /Volumes/Sierra</span><br><span class="line">--applicationpath /Applications/Install\ macOS\ High\ Sierra.app </span><br><span class="line">--nointeraction</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia </span><br><span class="line">--volume /Volumes/Sierra</span><br><span class="line">--applicationpath /Applications/Install\ macOS\ High\ Sierra.app </span><br><span class="line">--nointeraction</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -544,7 +557,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#忘记密码的处理"><span class="nav-number">1.</span> <span class="nav-text">忘记密码的处理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方案1"><span class="nav-number">1.0.1.</span> <span class="nav-text">方案1:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方案2-👍"><span class="nav-number">1.0.2.</span> <span class="nav-text">方案2 👍:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#制作U盘安装盘："><span class="nav-number">1.1.</span> <span class="nav-text">制作U盘安装盘：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#忘记密码的处理"><span class="nav-number">1.</span> <span class="nav-text">忘记密码的处理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方案1"><span class="nav-number">1.0.1.</span> <span class="nav-text">方案1:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方案2-👍"><span class="nav-number">1.0.2.</span> <span class="nav-text">方案2 👍:</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如果开启了-FileVault-的处理"><span class="nav-number">1.1.</span> <span class="nav-text">如果开启了 FileVault 的处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#制作U盘安装盘："><span class="nav-number">1.2.</span> <span class="nav-text">制作U盘安装盘：</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -578,7 +591,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.2k</span>
+    <span title="Site words total count">4.4k</span>
   
 </div>
 

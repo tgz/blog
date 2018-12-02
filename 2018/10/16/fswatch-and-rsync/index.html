@@ -137,7 +137,15 @@
 
 
   
-
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?140b14f58adf2f4622c51968beeb1140";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -355,8 +363,8 @@
         <p>最近觉得 mac 编译项目越来越慢，由于是 c++ 项目，可以用 linux 编译，于是整了一个性能稍好的 ubuntu，但是开发还是在 mac 上</p>
 <p>怎么方便 &amp; 快捷地把文件同步到编译机上，是个问题</p>
 <p>之前 rsync 也用过很多次了，这里就使用 fswatch + rsync 的方案</p>
-<h3 id="1-mac-上安装-fswatch"><a href="#1-mac-上安装-fswatch" class="headerlink" title="1. mac 上安装 fswatch"></a>1. mac 上安装 <code>fswatch</code></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install fswatch</span><br></pre></td></tr></table></figure>
-<h3 id="2-编写脚本，监控文件夹内容的变化"><a href="#2-编写脚本，监控文件夹内容的变化" class="headerlink" title="2. 编写脚本，监控文件夹内容的变化"></a>2. 编写脚本，监控文件夹内容的变化</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># fswatch 可同时监控多个文件夹，这里我有两个项目，写了两个文件夹</span></span><br><span class="line"><span class="comment"># -e 排除掉 git 目录</span></span><br><span class="line">fswatch /Users/xx/Git/repo1 /Users/xx/Git/repo2 -e <span class="string">".git"</span>| <span class="keyword">while</span> <span class="built_in">read</span> file</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地的 ~/Git/repo 同步到 远端的 /home/xx/workspace/ 下，需要修改目标路径</span></span><br><span class="line">target_path=<span class="string">'/home/xx/workspace/'</span><span class="variable">$&#123;file#/Users/xx/Git/&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># rsync 参数可以参考我正面的</span></span><br><span class="line"><span class="comment"># zz 是我 ssh config 的编译机</span></span><br><span class="line">rsync -trl --delete <span class="variable">$&#123;file&#125;</span> zz:<span class="variable">$&#123;target_path&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;file&#125;</span> sync to: <span class="variable">$&#123;target_path&#125;</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-mac-上安装-fswatch"><a href="#1-mac-上安装-fswatch" class="headerlink" title="1. mac 上安装 fswatch"></a>1. mac 上安装 <code>fswatch</code></h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install fswatch</span><br></pre></td></tr></table></figure>
+<h3 id="2-编写脚本，监控文件夹内容的变化"><a href="#2-编写脚本，监控文件夹内容的变化" class="headerlink" title="2. 编写脚本，监控文件夹内容的变化"></a>2. 编写脚本，监控文件夹内容的变化</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#!/bin/zsh</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># fswatch 可同时监控多个文件夹，这里我有两个项目，写了两个文件夹</span></span><br><span class="line"><span class="hljs-comment"># -e 排除掉 git 目录</span></span><br><span class="line">fswatch /Users/xx/Git/repo1 /Users/xx/Git/repo2 -e <span class="hljs-string">".git"</span>| <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> file</span><br><span class="line"><span class="hljs-keyword">do</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 将本地的 ~/Git/repo 同步到 远端的 /home/xx/workspace/ 下，需要修改目标路径</span></span><br><span class="line">target_path=<span class="hljs-string">'/home/xx/workspace/'</span><span class="hljs-variable">$&#123;file#/Users/xx/Git/&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># rsync 参数可以参考我正面的</span></span><br><span class="line"><span class="hljs-comment"># zz 是我 ssh config 的编译机</span></span><br><span class="line">rsync -trl --delete <span class="hljs-variable">$&#123;file&#125;</span> zz:<span class="hljs-variable">$&#123;target_path&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-string">"<span class="hljs-variable">$&#123;file&#125;</span> sync to: <span class="hljs-variable">$&#123;target_path&#125;</span>"</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">done</span></span><br></pre></td></tr></table></figure>
 <p>enjoy!</p>
 
       
@@ -571,7 +579,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.2k</span>
+    <span title="Site words total count">4.4k</span>
   
 </div>
 
