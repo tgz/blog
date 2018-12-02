@@ -368,7 +368,7 @@
 <li>进入 gitlab data 的实际存储文件夹：<br><code>/srv/docker/gitlab/gitlab</code></li>
 <li><p>这里能看到有 backups 文件夹</p>
 <p> 解压备份：</p>
- <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf 1526230868_2018_05_13_10.1.4_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf 1526230868_2018_05_13_10.1.4_gitlab_backup.tar</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>进入发现能看到 gitlab 的每日备份，将昨日的备份解压   </p>
 </li>
@@ -378,13 +378,13 @@
 <ol start="6">
 <li><p>将需要恢复的 repo 移动到当前 gitlab  repositoris 文件夹内。</p>
 <p> 执行：</p>
- <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> `ls`; <span class="hljs-keyword">do</span> git <span class="hljs-built_in">clone</span> --mirror <span class="hljs-variable">$i</span>;<span class="hljs-keyword">done</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `ls`; <span class="keyword">do</span> git <span class="built_in">clone</span> --mirror <span class="variable">$i</span>;<span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 <p> 这个命令遍历当前文件夹下的文件，分别执行 <code>clone</code> 命令，将 <code>bundle</code> 解包为 <code>*.git</code></p>
 </li>
 <li><p>参考：<a href="https://gitlab.com/gitlab-org/gitlab-ce/blob/master/doc/raketasks/import.md" target="_blank" rel="noopener">gitlab-raketasks-import</a>  执行 rake 命令：</p>
 </li>
 </ol>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u git -H bundle <span class="hljs-built_in">exec</span> rake gitlab:import:repos[<span class="hljs-string">'/home/git/data/repositories/Backup'</span>] RAILS_ENV=production</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u git -H bundle <span class="built_in">exec</span> rake gitlab:import:repos[<span class="string">'/home/git/data/repositories/Backup'</span>] RAILS_ENV=production</span><br></pre></td></tr></table></figure>
 <p>这句话会遍历指定的文件下的所有 <code>*.git</code>,导入到 gitlab 的数据库内。</p>
 <p>至此，恢复完成。</p>
 
@@ -497,7 +497,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -510,7 +510,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -577,7 +577,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">4.4k</span>
+    <span title="Site words total count">4.9k</span>
   
 </div>
 

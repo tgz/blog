@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="fastlane disable push notifications" />
+  <meta name="keywords" content="shader,OpenGL," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 因此，希望能在打包步骤来关闭项目的 Push notifications 开关。 First Ste">
-<meta name="keywords" content="fastlane disable push notifications">
+<meta name="description" content="RGB2HSL1234567891011const float eps = 0.0000001;vec3 rgb2hsl( vec3 col )&amp;#123;    float minc = min( col.r, min(col.g, col.b) );    float maxc = max( col.r, max(col.g, col.b) );    vec3  mask = step(co">
+<meta name="keywords" content="shader,OpenGL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="给 fastlane 添加自定义 action">
-<meta property="og:url" content="http://imqsc.xyz/2018/05/14/create-fastlane-action/index.html">
+<meta property="og:title" content="shader 中的颜色空间转换">
+<meta property="og:url" content="http://imqsc.xyz/2018/12/02/color-convert-shader/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 因此，希望能在打包步骤来关闭项目的 Push notifications 开关。 First Ste">
+<meta property="og:description" content="RGB2HSL1234567891011const float eps = 0.0000001;vec3 rgb2hsl( vec3 col )&amp;#123;    float minc = min( col.r, min(col.g, col.b) );    float maxc = max( col.r, max(col.g, col.b) );    vec3  mask = step(co">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-16T12:34:57.949Z">
+<meta property="og:updated_time" content="2018-12-02T16:00:44.278Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="给 fastlane 添加自定义 action">
-<meta name="twitter:description" content="最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。 这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。 因此，希望能在打包步骤来关闭项目的 Push notifications 开关。 First Ste">
+<meta name="twitter:title" content="shader 中的颜色空间转换">
+<meta name="twitter:description" content="RGB2HSL1234567891011const float eps = 0.0000001;vec3 rgb2hsl( vec3 col )&amp;#123;    float minc = min( col.r, min(col.g, col.b) );    float maxc = max( col.r, max(col.g, col.b) );    vec3  mask = step(co">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://imqsc.xyz/2018/05/14/create-fastlane-action/"/>
+  <link rel="canonical" href="http://imqsc.xyz/2018/12/02/color-convert-shader/"/>
 
 
 
 
 
-  <title>给 fastlane 添加自定义 action | 手艺人</title>
+  <title>shader 中的颜色空间转换 | 手艺人</title>
   
 
 
@@ -136,8 +136,6 @@
 
 
 
-  
-    <meta name="keywords" content="fastlane disable push notifications">
   
   <script>
   var _hmt = _hmt || [];
@@ -264,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/05/14/create-fastlane-action/">
+    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2018/12/02/color-convert-shader/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="脑补大王">
@@ -281,7 +279,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">给 fastlane 添加自定义 action</h2>
+          <h2 class="post-title" itemprop="name headline">shader 中的颜色空间转换</h2>
         
 
         <div class="post-meta">
@@ -293,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-14T14:33:19+08:00">
-                2018-05-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T23:59:57+08:00">
+                2018-12-02
               </time>
             
 
@@ -325,7 +323,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  583
+                  530
                 </span>
               
 
@@ -341,7 +339,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -362,27 +360,12 @@
       
 
       
-        <p>最近公司在做新项目，iOS 这边，因为企业证书配置了 Wildcard App ID,无法使用推送等功能。<br>之前的做法一直是配置另外一个 Target，使用不同的配置来实现 fastlane 自动打包。</p>
-<p>这种做法存在的问题是，每次新加入文件，都需选中多个 target ，如果忘记了，会导致打包失败。</p>
-<p>因此，希望能在打包步骤来关闭项目的 <code>Push notifications</code> 开关。</p>
-<h2 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h2><p>一开始想的是，写个脚本改 xcodeproj 的内容。  </p>
-<p>由于 xcodeproj 的结构看起来很混乱，各种 uuid 互相关联。<br>这里就想到使用 CocoaPods 提供的 <a href="https://github.com/CocoaPods/Xcodeproj" target="_blank" rel="noopener">Xcodeproj</a> 库来做。</p>
-<p>经过一番尝试和努力，写出了一个脚本</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">require</span> <span class="string">'xcodeproj'</span></span><br><span class="line"></span><br><span class="line">project = Xcodeproj::Project.open(project_path)</span><br><span class="line">target = project.targets.first</span><br><span class="line"></span><br><span class="line">attributes = project.root_object.attributes[<span class="string">'TargetAttributes'</span>]</span><br><span class="line">target_attributes = attributes[target.uuid]</span><br><span class="line">system_capabilities = target_attributes[<span class="string">'SystemCapabilities'</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> system_capabilities.<span class="keyword">class</span> == Hash</span><br><span class="line">    system_capabilities.delete(<span class="string">'com.apple.Push'</span>)</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">target.build_configurations.each <span class="keyword">do</span> <span class="params">|item|</span></span><br><span class="line">    <span class="comment"># just remove the entitlements config from code sign</span></span><br><span class="line">    item.build_settings[<span class="string">'CODE_SIGN_ENTITLEMENTS'</span>] = <span class="string">""</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">project.save()</span><br></pre></td></tr></table></figure>
-<p>这个脚本可以完成任务。但是总感觉不够好。在写脚本时翻 fastlane 的文档，看到了<a href="https://docs.fastlane.tools/plugins/create-plugin/#local-actions" target="_blank" rel="noopener">local-action</a>，这不正是我想要的么！</p>
-<h2 id="一-Local-Action"><a href="#一-Local-Action" class="headerlink" title="一. Local Action"></a>一. Local Action</h2><p>fastlane 官方提供了 local-action 的简要说明, 参照 github 中的<a href="https://github.com/fastlane/fastlane/blob/master/fastlane/actions/test_sample_code.rb" target="_blank" rel="noopener">示例</a>，</p>
-<p>给脚本加了 module, class 并放到项目 <code>fastlane/actions</code> 目录下,<br>命名为 <code>disable_push_notifications.rb</code>. </p>
-<p>Well Done! </p>
-<p>我们只要在想关闭推送的 lane 中，加入一行 <code>disable_push_notifications</code> 即可。</p>
-<p>更进一步，如果我有多个 xcodeproj 或 target 呢？</p>
-<p>那就加几个可选参数吧~ 最终完成的文件见<a href="https://github.com/tgz/fastlane-plugin-disable_push_nogifications/blob/master/lib/fastlane/plugin/disable_push_notifications/actions/disable_push_notifications_action.rb" target="_blank" rel="noopener">这里</a></p>
-<p>在使用时，也可以 <code>disable_push_notifications(xcodeproj: your.xcodeproj, target: enterprise)</code> 设定相应的 project 文件和 target.</p>
-<h2 id="二-写一个插件"><a href="#二-写一个插件" class="headerlink" title="二. 写一个插件"></a>二. 写一个插件</h2><p>在看 local action 的文档时，看到了 fastlane 有说明如何自己实现一个<a href="https://docs.fastlane.tools/plugins/create-plugin/#create-your-own-plugin" target="_blank" rel="noopener">插件</a>。</p>
-<p>那就来试一把吧！</p>
-<p>执行 <code>fastlane new_plugin disable_push_notifications</code>, fastlane 自动帮我们生成了一个插件的目录结构。<br>观察一番，只要把我们刚才实现的 action 的内容放到插件自动生成的 ruby 文件中即可。</p>
-<p>最后实现的插件，见<a href="https://github.com/tgz/fastlane-plugin-disable_push_nogifications" target="_blank" rel="noopener">这个仓库</a></p>
-<p>我这个需求由于很小众，就没有发布到 <a href="https://rubygems.org/" target="_blank" rel="noopener">rubygems.org</a>.</p>
-<p>如果有需求，建议还是使用 local action 的形式来做。毕竟只要加一个文件在项目中，简单又方便。</p>
+        <h1 id="RGB2HSL"><a href="#RGB2HSL" class="headerlink" title="RGB2HSL"></a>RGB2HSL</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> eps = <span class="number">0.0000001</span>;</span><br><span class="line"><span class="function">vec3 <span class="title">rgb2hsl</span><span class="params">( vec3 col )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">float</span> minc = min( col.r, min(col.g, col.b) );</span><br><span class="line">    <span class="keyword">float</span> maxc = max( col.r, max(col.g, col.b) );</span><br><span class="line">    vec3  mask = step(col.grr,col.rgb) * step(col.bbg,col.rgb);</span><br><span class="line">    vec3 h = mask * (vec3(<span class="number">0.0</span>,<span class="number">2.0</span>,<span class="number">4.0</span>) + (col.gbr-col.brg)/(maxc-minc + eps)) / <span class="number">6.0</span>;</span><br><span class="line">    <span class="keyword">return</span> vec3( fract( <span class="number">1.0</span> + h.x + h.y + h.z ),              <span class="comment">// H</span></span><br><span class="line">                 (maxc-minc)/(<span class="number">1.0</span>-<span class="built_in">abs</span>(minc+maxc<span class="number">-1.0</span>) + eps),  <span class="comment">// S</span></span><br><span class="line">                 (minc+maxc)*<span class="number">0.5</span> );                           <span class="comment">// L</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="RGB2HSV"><a href="#RGB2HSV" class="headerlink" title="RGB2HSV"></a>RGB2HSV</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> eps = <span class="number">0.0000000001</span>;</span><br><span class="line"><span class="function">vec3 <span class="title">rgb2hsv</span><span class="params">( in vec3 c)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vec4 k = vec4(<span class="number">0.0</span>, <span class="number">-1.0</span>/<span class="number">3.0</span>, <span class="number">2.0</span>/<span class="number">3.0</span>, <span class="number">-1.0</span>);</span><br><span class="line">    vec4 p = mix(vec4(c.zy, k.wz), vec4(c.yz, k.xy), (c.z&lt;c.y) ? <span class="number">1.0</span> : <span class="number">0.0</span>);</span><br><span class="line">    vec4 q = mix(vec4(p.xyw, c.x), vec4(c.x, p.yzx), (p.x&lt;c.x) ? <span class="number">1.0</span> : <span class="number">0.0</span>);</span><br><span class="line">    <span class="keyword">float</span> d = q.x - min(q.w, q.y);</span><br><span class="line">    <span class="keyword">return</span> vec3(<span class="built_in">abs</span>(q.z + (q.w - q.y) / (<span class="number">6.0</span>*d+eps)), d / (q.x+eps), q.x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Using"><a href="#Using" class="headerlink" title="Using"></a>Using</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vec4 K = vec4(<span class="number">0.0</span>, <span class="number">-1.0</span> / <span class="number">3.0</span>, <span class="number">2.0</span> / <span class="number">3.0</span>, <span class="number">-1.0</span>);</span><br><span class="line">    vec4 p = mix(vec4(c.bg, K.wz), vec4(c.gb, K.xy), step(c.b, c.g));</span><br><span class="line">    vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">float</span> d = q.x - min(q.w, q.y);</span><br><span class="line">    <span class="keyword">float</span> e = <span class="number">1.0e-10</span>;</span><br><span class="line">    <span class="keyword">return</span> vec3(<span class="built_in">abs</span>(q.z + (q.w - q.y) / (<span class="number">6.0</span> * d + e)), d / (q.x + e), q.x);</span><br></pre></td></tr></table></figure>
+<h1 id="HSV2RGB-Using"><a href="#HSV2RGB-Using" class="headerlink" title="HSV2RGB(Using)"></a>HSV2RGB(Using)</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//convert HSV to RGB</span></span><br><span class="line"><span class="function">vec3 <span class="title">hsv2rgb</span><span class="params">(vec3 c)</span></span>&#123;</span><br><span class="line">    vec4 K = vec4(<span class="number">1.0</span>, <span class="number">2.0</span> / <span class="number">3.0</span>, <span class="number">1.0</span> / <span class="number">3.0</span>, <span class="number">3.0</span>);</span><br><span class="line">    vec3 p = <span class="built_in">abs</span>(fract(c.xxx + K.xyz) * <span class="number">6.0</span> - K.www);</span><br><span class="line">    <span class="keyword">return</span> c.z * mix(K.xxx, clamp(p - K.xxx, <span class="number">0.0</span>, <span class="number">1.0</span>), c.y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#HSV2RGB<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Official HSV to RGB conversion </span></span><br><span class="line"><span class="function">vec3 <span class="title">hsv2rgb</span><span class="params">( in vec3 c )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vec3 rgb = clamp( <span class="built_in">abs</span>(mod(c.x*<span class="number">6.0</span>+vec3(<span class="number">0.0</span>,<span class="number">4.0</span>,<span class="number">2.0</span>),<span class="number">6.0</span>)<span class="number">-3.0</span>)<span class="number">-1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span> );</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> c.z * mix( vec3(<span class="number">1.0</span>), rgb, c.y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Smooth HSV to RGB conversion </span></span><br><span class="line"><span class="function">vec3 <span class="title">hsv2rgb_smooth</span><span class="params">( in vec3 c )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vec3 rgb = clamp( <span class="built_in">abs</span>(mod(c.x*<span class="number">6.0</span>+vec3(<span class="number">0.0</span>,<span class="number">4.0</span>,<span class="number">2.0</span>),<span class="number">6.0</span>)<span class="number">-3.0</span>)<span class="number">-1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span> );</span><br><span class="line"></span><br><span class="line">	rgb = rgb*rgb*(<span class="number">3.0</span><span class="number">-2.0</span>*rgb); <span class="comment">// cubic smoothing	</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> c.z * mix( vec3(<span class="number">1.0</span>), rgb, c.y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="HSL2RGB"><a href="#HSL2RGB" class="headerlink" title="HSL2RGB"></a>HSL2RGB</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vec3 <span class="title">hsl2rgb</span><span class="params">( in vec3 c )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    vec3 rgb = clamp( <span class="built_in">abs</span>(mod(c.x*<span class="number">6.0</span>+vec3(<span class="number">0.0</span>,<span class="number">4.0</span>,<span class="number">2.0</span>),<span class="number">6.0</span>)<span class="number">-3.0</span>)<span class="number">-1.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span> );</span><br><span class="line">    <span class="keyword">return</span> c.z + c.y * (rgb<span class="number">-0.5</span>)*(<span class="number">1.0</span>-<span class="built_in">abs</span>(<span class="number">2.0</span>*c.z<span class="number">-1.0</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -400,7 +383,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/fastlane/" rel="tag"># fastlane</a>
+            <a href="/tags/shader/" rel="tag"># shader</a>
+          
+            <a href="/tags/OpenGL/" rel="tag"># OpenGL</a>
           
         </div>
       
@@ -413,8 +398,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/08/xcrun-error-locate-sdk/" rel="next" title="xcrun error SDK "xx" cannot be locateed 解决">
-                <i class="fa fa-chevron-left"></i> xcrun error SDK "xx" cannot be locateed 解决
+              <a href="/2018/10/16/fswatch-and-rsync/" rel="next" title="fswatch_and_rsync">
+                <i class="fa fa-chevron-left"></i> fswatch_and_rsync
               </a>
             
           </div>
@@ -422,10 +407,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/17/restore-gitlab-repos/" rel="prev" title="gitlab 批量恢复被删除的 repo">
-                gitlab 批量恢复被删除的 repo <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -564,7 +545,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#First-Step"><span class="nav-number">1.</span> <span class="nav-text">First Step</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一-Local-Action"><span class="nav-number">2.</span> <span class="nav-text">一. Local Action</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-写一个插件"><span class="nav-number">3.</span> <span class="nav-text">二. 写一个插件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RGB2HSL"><span class="nav-number">1.</span> <span class="nav-text">RGB2HSL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RGB2HSV"><span class="nav-number">2.</span> <span class="nav-text">RGB2HSV</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Using"><span class="nav-number">2.1.</span> <span class="nav-text">Using</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HSV2RGB-Using"><span class="nav-number">3.</span> <span class="nav-text">HSV2RGB(Using)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HSL2RGB"><span class="nav-number">4.</span> <span class="nav-text">HSL2RGB</span></a></li></ol></div>
             
 
           </div>
