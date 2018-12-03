@@ -744,6 +744,12 @@
     <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <!-- END LOCAL -->
       <script type="text/javascript">
+          let str = location.pathname
+          if(a.substr(a.length-1,a.length)=="/") {
+            str=str.substr(0,a.length-1);
+          }
+          let index = str.lastIndexOf("\/");  
+          str  = str.substring(index + 1, str.length);
           var gitalk = new Gitalk({
                clientID: '9bde4712cb898ab20b11',
                clientSecret: '2709bff635499e039c96ce342c0dd493bafea8a7',
@@ -751,7 +757,7 @@
                owner: 'tgz',
                admin: ['tgz'],
                title: 'gitlab 批量恢复被删除的 repo',
-               id: location.pathname,      // Ensure uniqueness and length less than 50
+               id: str,      // Ensure uniqueness and length less than 50
                distractionFreeMode: false  // Facebook-like distraction free mode
                });
         gitalk.render('gitalk-container');
