@@ -6,4 +6,4 @@
 {% include 'changyan.swig' %}
 {% include 'gitment.swig' %}
 {% include 'valine.swig' %}
-{% include 'gittalk.swig' %}
+{% include 'gitalk.swig' %}
