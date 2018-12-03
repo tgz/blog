@@ -633,8 +633,8 @@
 <!-- END LOCAL -->
       <script type="text/javascript">
           let str = location.pathname
-          if(a.substr(a.length-1,a.length)=="/") {
-            str=str.substr(0,a.length-1);
+          if(str.substr(str.length-1,str.length)=="/") {
+            str=str.substr(0,str.length-1);
           }
           let index = str.lastIndexOf("\/");  
           str  = str.substring(index + 1, str.length);
