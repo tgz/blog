@@ -5,6 +5,12 @@
     <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <!-- END LOCAL -->
       <script type="text/javascript">
+          let str = location.pathname
+          if(str.substr(str.length-1,str.length)=="/") {
+            str=str.substr(0,str.length-1);
+          }
+          let index = str.lastIndexOf("\/");  
+          str  = str.substring(index + 1, str.length);
           var gitalk = new Gitalk({
                clientID: '{{theme.gitalk.clientID}}',
                clientSecret: '{{theme.gitalk.clientSecret}}',
@@ -12,7 +18,7 @@
                owner: '{{theme.gitalk.owner}}',
                admin: ['{{theme.gitalk.admin}}'],
                title: '{{page.title}}',
-               id: location.pathname,      // Ensure uniqueness and length less than 50
+               id: str,      // Ensure uniqueness and length less than 50
                distractionFreeMode: false  // Facebook-like distraction free mode
                });
         gitalk.render('gitalk-container');
