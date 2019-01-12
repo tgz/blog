@@ -92,7 +92,10 @@
 <meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-project.jpg">
 <meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-build-config1.jpg">
 <meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-build-sign.jpg">
-<meta property="og:updated_time" content="2019-01-12T08:33:05.752Z">
+<meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-connect-Store.jpg">
+<meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-select-team.jpg">
+<meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-connect-app2.jpg">
+<meta property="og:updated_time" content="2019-01-12T08:39:12.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="appcenter.ms 初体验">
 <meta name="twitter:description" content="最近发现微软的一个服务： AppCenter  https://appcenter.ms 这是一套集成了 app 开发人员常用服务的解决方案，包含常用的 CI/CD， 错误收集， 用户统计，测试等，具体可以看 官网介绍 做 iOS 的同学，每次发布版本，要编译，上传 AppStore， 这个过程比较漫长，使用工具自动化这个过程，解决生产力是必须的。AppCenter 免费账户每月有 240 min">
@@ -329,7 +332,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  982
+                  1,006
                 </span>
               
 
@@ -374,11 +377,14 @@
 <p>这里有个坑，免费账户，每次编译限制为 30 min, 付费后也只有 60 min，对于每次 archive 时间很长的项目不适用，需要注意。</p>
 </blockquote>
 <p><img src="http://cdn.imqsc.xyz/appcenter-build-time-limit.jpg" alt="appcenter-build-time-limit"></p>
-<h2 id="Level1"><a href="#Level1" class="headerlink" title="Level1"></a>Level1</h2><p>AppCenter 使用起来非常简单，关联一下 GitHub 帐号，选择项目即可，它会加载所有的分支<br><img src="http://cdn.imqsc.xyz/appcenter-project.jpg" alt="appcenter-project"><br>点击相应分支右侧的齿轮打开配置，简单是明了：<br>选择项目文件，再选择相应的 Scheme<br><img src="http://cdn.imqsc.xyz/appcenter-build-config1.jpg" alt="appcenter-build-config1"></p>
+<h2 id="Level1"><a href="#Level1" class="headerlink" title="Level1"></a>Level1</h2><p>AppCenter 使用起来非常简单，关联一下 GitHub 帐号，选择项目即可，它会加载所有的分支<br><img src="http://cdn.imqsc.xyz/appcenter-project.jpg" alt="appcenter-project"><br>点击相应分支右侧的齿轮打开配置，简单明了：<br>选择项目文件，再选择相应的 Scheme<br><img src="http://cdn.imqsc.xyz/appcenter-build-config1.jpg" alt="appcenter-build-config1"></p>
 <p>接着配置一下签名使用的证书、pp文件<br><img src="http://cdn.imqsc.xyz/appcenter-build-sign.jpg" alt="appcenter-build-sign"></p>
-<p>后面看情况，可以配置发布到 iTunesConnect。</p>
+<p>可以配置发布到 iTunesConnect。<br><img src="http://cdn.imqsc.xyz/appcenter-connect-Store.jpg" alt="appcenter-connect-Store"></p>
+<p><img src="http://cdn.imqsc.xyz/appcenter-select-team.jpg" alt="appcenter-select-tea"></p>
+<p><img src="http://cdn.imqsc.xyz/appcenter-connect-app2.jpg" alt="appcenter-connect-app2"></p>
+<p>不得不说，微软真是太贴心了，用起来非常傻瓜。</p>
 <p>AppCenter 会自动检测 podfile.lock 以及 Carthfile.resolved<br>如果你只用了 Cocoapods、Carthage，并且直接配置上传 iTunesConnect 的话，项目上什么都不需要修改，这个自动构建并上传 iTunesConnect 配置就做完了。</p>
-<h2 id="Leve2"><a href="#Leve2" class="headerlink" title="Leve2"></a>Leve2</h2><p>如果有其它脚本，或者需要有 fastlane 命令等情况，以及编译后需要上传内测的情况，可以有三处 build-script 配置：</p>
+<h2 id="Leve2-使用脚本，预处理-amp-上传内测"><a href="#Leve2-使用脚本，预处理-amp-上传内测" class="headerlink" title="Leve2 使用脚本，预处理&amp;上传内测"></a>Leve2 使用脚本，预处理&amp;上传内测</h2><p>如果有其它脚本，或者需要有 fastlane 命令等情况，以及编译后需要上传内测的情况，可以有三处 build-script 配置：</p>
 <ul>
 <li>appcenter-post-clone.sh</li>
 <li>appcenter-pre-build.sh</li>
@@ -588,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Level1"><span class="nav-number">1.</span> <span class="nav-text">Level1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Leve2"><span class="nav-number">2.</span> <span class="nav-text">Leve2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level3-使用编译好的-Carthage-build"><span class="nav-number">3.</span> <span class="nav-text">Level3 使用编译好的 Carthage build</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other-Resources"><span class="nav-number">4.</span> <span class="nav-text">Other Resources</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Level1"><span class="nav-number">1.</span> <span class="nav-text">Level1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Leve2-使用脚本，预处理-amp-上传内测"><span class="nav-number">2.</span> <span class="nav-text">Leve2 使用脚本，预处理&amp;上传内测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Level3-使用编译好的-Carthage-build"><span class="nav-number">3.</span> <span class="nav-text">Level3 使用编译好的 Carthage build</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other-Resources"><span class="nav-number">4.</span> <span class="nav-text">Other Resources</span></a></li></ol></div>
             
 
           </div>
