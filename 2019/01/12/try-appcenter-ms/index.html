@@ -95,7 +95,8 @@
 <meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-connect-Store.jpg">
 <meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-select-team.jpg">
 <meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-connect-app2.jpg">
-<meta property="og:updated_time" content="2019-01-12T09:41:26.460Z">
+<meta property="og:image" content="http://cdn.imqsc.xyz/appcenter-build-success.jpg">
+<meta property="og:updated_time" content="2019-01-12T09:55:49.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="appcenter.ms 初体验">
 <meta name="twitter:description" content="最近发现微软的一个服务： AppCenter  https://appcenter.ms 这是一套集成了 app 开发人员常用服务的解决方案，包含常用的 CI/CD， 错误收集， 用户统计，测试等，具体可以看 官网介绍 做 iOS 的同学，每次发布版本，要编译，上传 AppStore， 这个过程比较漫长，使用工具自动化这个过程，解决生产力是必须的。AppCenter 免费账户每月有 240 min">
@@ -332,7 +333,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,100
+                  1,120
                 </span>
               
 
@@ -384,6 +385,7 @@
 <p><img src="http://cdn.imqsc.xyz/appcenter-connect-app2.jpg" alt="appcenter-connect-app2"></p>
 <p>不得不说，微软真是太贴心了，用起来非常傻瓜。</p>
 <p>AppCenter 会自动检测 podfile.lock 以及 Carthfile.resolved<br>如果你只用了 Cocoapods、Carthage，并且直接配置上传 iTunesConnect 的话，项目上什么都不需要修改，这个自动构建并上传 iTunesConnect 配置就做完了。</p>
+<p>而且得益于服务器位置的原因，上传 iTunesConnect 也非常快<br><img src="http://cdn.imqsc.xyz/appcenter-build-success.jpg" alt="appcenter-build-success"></p>
 <h2 id="Leve2-使用脚本，预处理-amp-上传内测"><a href="#Leve2-使用脚本，预处理-amp-上传内测" class="headerlink" title="Leve2 使用脚本，预处理&amp;上传内测"></a>Leve2 使用脚本，预处理&amp;上传内测</h2><p>如果有其它脚本，或者需要有 fastlane 命令等情况，以及编译后需要上传内测的情况，可以有三处 build-script 配置：</p>
 <ul>
 <li>appcenter-post-clone.sh</li>
