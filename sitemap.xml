@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
+    
+    <lastmod>2019-01-16T14:51:00.152Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://imqsc.xyz/2019/01/12/try-appcenter-ms/</loc>
     
     <lastmod>2019-01-12T11:36:13.491Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>
     
     <lastmod>2018-05-18T05:32:18.652Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
-    
-    <lastmod>2018-05-17T13:06:22.514Z</lastmod>
     
   </url>
   
