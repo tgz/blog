@@ -1,8 +1,8 @@
 ---
-title: 使用 FFmpeg 给视频添加水印
+title: FFmpeg 水印、图片转视频
 date: 2018-03-28 18:08:55
 tags: ffmpeg
-keywords: ffmpeg 水印 时间段
+keywords: ffmpeg 水印 时间段 图片转视频
 ---
 
 接到一条求助：在视频的**前 2 秒**添加水印，想了下最方便的应该是使用 FFMPEG 了。简单捣鼓了一下：
@@ -24,6 +24,16 @@ ffmpeg -i source.mp4 \
 ffmpeg -i source.mp4 \
    -vf "drawtext=fontfile=/Library/Fonts/AdobeHeitiStd-Regular.otf:text='watermark测试':x=30:y=h-30:enable='if(gte(t,3),0,1)':fontsize=24:fontcolor=red@0.7" output.mp4
 ```
+
+### FFmpeg 将图片序列转视频
+```bash
+ffmpeg -r 30 -i v_%d.jpg -b:v 3m -vcodec libx264 video2.mp4
+```
+
+`-r 30 : 30fps`
+`-i v_%d.jpg: input images: v_1.jpg v_2.jpg ... [v_%03d.jpg]`
+`-b:v 3m : video bitrate: 3m/s`
+`-vcodec libx264: video codec is h264`
 
 ---
 

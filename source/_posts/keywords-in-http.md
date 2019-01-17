@@ -1,5 +1,5 @@
 ---
-title: HTTP 中的关键词
+title: HTTP keywords you should know
 date: 2018-12-05 22:13:58
 tags: http
 ---
