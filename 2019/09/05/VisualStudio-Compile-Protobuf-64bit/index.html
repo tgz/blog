@@ -79,24 +79,24 @@
 
 
 
-<meta name="description" content="基于 VisualStudio 2015  Protobuf 下载源码， 新建 install 文件夹。 进入 cmake 目录，新建 build 文件夹  在 build 文件夹内执行命令，生成 sln   1cmake -DCMAKE_INSTALL_PREFIX=../../install -G &quot;Visual Studio 14 2015 Win64&quot; .. 若不加 -G 参数参数内的">
+<meta name="description" content="基于 VisualStudio 2015   Protobuf 下载源码， 新建 install 文件夹。 进入 cmake 目录，新建 build 文件夹   在 build 文件夹内执行命令，生成 sln    1cmake -DCMAKE_INSTALL_PREFIX=../../install -G &quot;Visual Studio 14 2015 Win64&quot; .. 若不加 -G 参数参数">
 <meta name="keywords" content="VisualStudio,Nanomsg,Protobuf">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VisualStudio 编译 64位 Nanomsg, Protobuf">
 <meta property="og:url" content="http://imqsc.xyz/2019/09/05/VisualStudio-Compile-Protobuf-64bit/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="基于 VisualStudio 2015  Protobuf 下载源码， 新建 install 文件夹。 进入 cmake 目录，新建 build 文件夹  在 build 文件夹内执行命令，生成 sln   1cmake -DCMAKE_INSTALL_PREFIX=../../install -G &quot;Visual Studio 14 2015 Win64&quot; .. 若不加 -G 参数参数内的">
+<meta property="og:description" content="基于 VisualStudio 2015   Protobuf 下载源码， 新建 install 文件夹。 进入 cmake 目录，新建 build 文件夹   在 build 文件夹内执行命令，生成 sln    1cmake -DCMAKE_INSTALL_PREFIX=../../install -G &quot;Visual Studio 14 2015 Win64&quot; .. 若不加 -G 参数参数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/105286/1567584625468-aa9747a6-d889-4bb1-aeb5-f17443c4c945.png#align=left&display=inline&height=495&name=image.png&originHeight=495&originWidth=530&size=67101&status=done&width=530">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/105286/1567585193680-2fc62fdf-bcbd-4323-a95b-7475d53dfe3e.png#align=left&display=inline&height=58&name=image.png&originHeight=58&originWidth=240&size=4091&status=done&width=240">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/105286/1567585049662-c09f7ba3-ab40-4f65-92f4-761f89f36a28.png#align=left&display=inline&height=223&name=image.png&originHeight=223&originWidth=563&size=18809&status=done&width=563">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/105286/1567585206672-8ebdd129-c895-4b3b-8b14-d8524eb8247f.png#align=left&display=inline&height=121&name=image.png&originHeight=121&originWidth=619&size=9320&status=done&width=619">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/105286/1567585296799-8dcd061e-a866-4efd-9c86-60b4ca3f746a.png#align=left&display=inline&height=167&name=image.png&originHeight=167&originWidth=694&size=16355&status=done&width=694">
-<meta property="og:updated_time" content="2019-09-05T09:04:30.025Z">
+<meta property="og:image" content="http://imqsc.xyz/2019/09/05/VisualStudio-Compile-Protobuf-64bit/1.png">
+<meta property="og:image" content="http://imqsc.xyz/2019/09/05/VisualStudio-Compile-Protobuf-64bit/2.png">
+<meta property="og:image" content="http://imqsc.xyz/2019/09/05/VisualStudio-Compile-Protobuf-64bit/3.png">
+<meta property="og:image" content="http://imqsc.xyz/2019/09/05/VisualStudio-Compile-Protobuf-64bit/4.png">
+<meta property="og:image" content="http://imqsc.xyz/2019/09/05/VisualStudio-Compile-Protobuf-64bit/5.png">
+<meta property="og:updated_time" content="2019-09-05T15:09:55.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VisualStudio 编译 64位 Nanomsg, Protobuf">
-<meta name="twitter:description" content="基于 VisualStudio 2015  Protobuf 下载源码， 新建 install 文件夹。 进入 cmake 目录，新建 build 文件夹  在 build 文件夹内执行命令，生成 sln   1cmake -DCMAKE_INSTALL_PREFIX=../../install -G &quot;Visual Studio 14 2015 Win64&quot; .. 若不加 -G 参数参数内的">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/png/105286/1567584625468-aa9747a6-d889-4bb1-aeb5-f17443c4c945.png#align=left&display=inline&height=495&name=image.png&originHeight=495&originWidth=530&size=67101&status=done&width=530">
+<meta name="twitter:description" content="基于 VisualStudio 2015   Protobuf 下载源码， 新建 install 文件夹。 进入 cmake 目录，新建 build 文件夹   在 build 文件夹内执行命令，生成 sln    1cmake -DCMAKE_INSTALL_PREFIX=../../install -G &quot;Visual Studio 14 2015 Win64&quot; .. 若不加 -G 参数参数">
+<meta name="twitter:image" content="http://imqsc.xyz/2019/09/05/VisualStudio-Compile-Protobuf-64bit/1.png">
 
 
 
@@ -367,26 +367,28 @@
 
       
         <blockquote>
-<p>基于 VisualStudio 2015</p>
+<p>基于 VisualStudio 2015 </p>
 </blockquote>
 <h2 id="Protobuf"><a href="#Protobuf" class="headerlink" title="Protobuf"></a>Protobuf</h2><ol>
 <li>下载源码，</li>
 <li>新建 install 文件夹。</li>
-<li>进入 cmake 目录，新建 build 文件夹 </li>
-<li>在 build 文件夹内执行命令，生成 sln </li>
+<li>进入 cmake 目录，新建 build 文件夹  </li>
+<li>在 build 文件夹内执行命令，生成 sln  </li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_INSTALL_PREFIX=../../install -G <span class="string">"Visual Studio 14 2015 Win64"</span> ..</span><br></pre></td></tr></table></figure>
 <p>若不加 -G 参数参数内的 Win64，默认生成的是 32 位的构建</p>
 <p>CMake 文档：不同 CMake 版本，-G 内支持的内容可能不同</p>
 <p><a href="https://cmake.org/cmake/help/v3.12/manual/cmake-generators.7.html#ide-build-tool-generators" target="_blank" rel="noopener">https://cmake.org/cmake/help/v3.12/manual/cmake-generators.7.html#ide-build-tool-generators</a></p>
 <p>之后，打开生成的 sln 文件。</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/105286/1567584625468-aa9747a6-d889-4bb1-aeb5-f17443c4c945.png#align=left&amp;display=inline&amp;height=495&amp;name=image.png&amp;originHeight=495&amp;originWidth=530&amp;size=67101&amp;status=done&amp;width=530" alt="image.png"><br>确认生成的项目为 64 位编译<br><img src="https://cdn.nlark.com/yuque/0/2019/png/105286/1567585193680-2fc62fdf-bcbd-4323-a95b-7475d53dfe3e.png#align=left&amp;display=inline&amp;height=58&amp;name=image.png&amp;originHeight=58&amp;originWidth=240&amp;size=4091&amp;status=done&amp;width=240" alt="image.png"></p>
+<p><img src="/2019/09/05/VisualStudio-Compile-Protobuf-64bit/1.png" alt="image.png"></p>
+<p>确认生成的项目为 64 位编译</p>
+<p><img src="/2019/09/05/VisualStudio-Compile-Protobuf-64bit/2.png" alt="image.png"></p>
 <p>加载完成后，「生成 」「ALL_BUILD」</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/105286/1567585049662-c09f7ba3-ab40-4f65-92f4-761f89f36a28.png#align=left&amp;display=inline&amp;height=223&amp;name=image.png&amp;originHeight=223&amp;originWidth=563&amp;size=18809&amp;status=done&amp;width=563" alt="image.png"></p>
+<p><img src="/2019/09/05/VisualStudio-Compile-Protobuf-64bit/3.png" alt="image.png"></p>
 <p>编译成功</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/105286/1567585206672-8ebdd129-c895-4b3b-8b14-d8524eb8247f.png#align=left&amp;display=inline&amp;height=121&amp;name=image.png&amp;originHeight=121&amp;originWidth=619&amp;size=9320&amp;status=done&amp;width=619" alt="image.png"></p>
+<p><img src="/2019/09/05/VisualStudio-Compile-Protobuf-64bit/4.png" alt="image.png"></p>
 <p>生成 Install ，会将编译出的 lib\头文件等，放到 install 目录下</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2019/png/105286/1567585296799-8dcd061e-a866-4efd-9c86-60b4ca3f746a.png#align=left&amp;display=inline&amp;height=167&amp;name=image.png&amp;originHeight=167&amp;originWidth=694&amp;size=16355&amp;status=done&amp;width=694" alt="image.png"></p>
+<p><img src="/2019/09/05/VisualStudio-Compile-Protobuf-64bit/5.png" alt="image.png"></p>
 <h2 id="Nanomsg"><a href="#Nanomsg" class="headerlink" title="Nanomsg"></a>Nanomsg</h2><p>同 protobuf, cmake 命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_INSTALL_PREFIX=../install -G <span class="string">"Visual Studio 14 2015 Win64"</span> ..</span><br></pre></td></tr></table></figure>
 
