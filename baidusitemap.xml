@@ -3,191 +3,18 @@
 
 
     
-  <url>
-    <loc>http://imqsc.xyz/2019/09/05/VisualStudio-Compile-Protobuf-64bit/</loc>
-    <lastmod>2019-09-05T15:09:55.334Z</lastmod>
-    <data>
-        <display>
-        <title>VisualStudio 编译 64位 Nanomsg, Protobuf</title>
-        <pubTime>2019-09-05T09:02:20.000Z</pubTime>
-        
-        <tag>VisualStudio</tag>
-         
-        <tag>Nanomsg</tag>
-         
-        <tag>Protobuf</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
+    
+    
     
   <url>
-    <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
-    <lastmod>2019-01-16T14:53:45.695Z</lastmod>
+    <loc>http://imqsc.xyz/2018/05/08/xcrun-error-locate-sdk/</loc>
+    <lastmod>2019-10-07T12:44:37.507Z</lastmod>
     <data>
         <display>
-        <title>FFmpeg 水印、图片转视频</title>
-        <pubTime>2018-03-28T10:08:55.000Z</pubTime>
+        <title>xcrun error SDK "xx" cannot be locateed 解决</title>
+        <pubTime>2018-05-08T09:21:46.000Z</pubTime>
         
-        <tag>ffmpeg</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2019/01/12/try-appcenter-ms/</loc>
-    <lastmod>2019-01-12T11:36:13.491Z</lastmod>
-    <data>
-        <display>
-        <title>appcenter.ms 初体验</title>
-        <pubTime>2019-01-12T04:37:21.000Z</pubTime>
-        
-        <tag>CI</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/12/05/keywords-in-http/</loc>
-    <lastmod>2019-01-12T08:40:33.964Z</lastmod>
-    <data>
-        <display>
-        <title>HTTP keywords you should know</title>
-        <pubTime>2018-12-05T14:13:58.000Z</pubTime>
-        
-        <tag>http</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/12/05/horse-butt-and-space-shuttle/</loc>
-    <lastmod>2018-12-05T14:33:47.085Z</lastmod>
-    <data>
-        <display>
-        <title>马屁股决定航天飞机</title>
-        <pubTime>2018-12-05T14:31:49.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/12/02/color-convert-shader/</loc>
-    <lastmod>2018-12-02T16:03:40.014Z</lastmod>
-    <data>
-        <display>
-        <title>shader 中的颜色空间转换</title>
-        <pubTime>2018-12-02T15:59:57.000Z</pubTime>
-        
-        <tag>shader</tag>
-         
-        <tag>OpenGL</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/04/13/macos-manage/</loc>
-    <lastmod>2018-10-26T03:59:33.168Z</lastmod>
-    <data>
-        <display>
-        <title>mac 管理</title>
-        <pubTime>2018-04-13T08:12:42.000Z</pubTime>
-        
-        <tag>macos</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
-    <lastmod>2018-10-16T07:16:14.943Z</lastmod>
-    <data>
-        <display>
-        <title>GPUImage 中的曲线滤镜</title>
-        <pubTime>2018-04-24T00:35:34.000Z</pubTime>
-        
-        <tag>GPUImage</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/09/09/macos-add-globle-shortcut/</loc>
-    <lastmod>2018-10-16T07:15:52.573Z</lastmod>
-    <data>
-        <display>
-        <title>给 Xcode run 添加全局快捷键</title>
-        <pubTime>2018-09-09T13:22:52.000Z</pubTime>
-        
-        <tag>Xcode</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/07/01/markdown-details/</loc>
-    <lastmod>2018-10-16T06:43:54.928Z</lastmod>
-    <data>
-        <display>
-        <title>markdown 中使用可展开的区域 details</title>
-        <pubTime>2018-07-01T09:46:51.000Z</pubTime>
-        
-        <tag>markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/10/16/fswatch-and-rsync/</loc>
-    <lastmod>2018-10-16T06:28:12.921Z</lastmod>
-    <data>
-        <display>
-        <title>fswatch_and_rsync</title>
-        <pubTime>2018-10-16T05:54:50.000Z</pubTime>
-        
-        <tag>fswatch</tag>
-         
-        <tag>rsync</tag>
+        <tag>iOS</tag>
          
          
            
@@ -198,7 +25,7 @@
     
   <url>
     <loc>http://imqsc.xyz/2018/04/13/ubuntu-l2tp/</loc>
-    <lastmod>2018-07-01T10:07:06.641Z</lastmod>
+    <lastmod>2019-10-07T12:44:37.506Z</lastmod>
     <data>
         <display>
         <title>Ubuntu L2TP 配置</title>
@@ -215,7 +42,7 @@
     
   <url>
     <loc>http://imqsc.xyz/2018/06/22/ubuntu-docker-without-sudo/</loc>
-    <lastmod>2018-07-01T10:06:41.744Z</lastmod>
+    <lastmod>2019-10-07T12:44:37.506Z</lastmod>
     <data>
         <display>
         <title>Ubuntu 下免 root 权限执行 docker 命令</title>
@@ -233,8 +60,25 @@
 
     
   <url>
+    <loc>http://imqsc.xyz/2019/01/12/try-appcenter-ms/</loc>
+    <lastmod>2019-10-07T12:44:37.506Z</lastmod>
+    <data>
+        <display>
+        <title>appcenter.ms 初体验</title>
+        <pubTime>2019-01-12T04:37:21.000Z</pubTime>
+        
+        <tag>CI</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
-    <lastmod>2018-07-01T09:48:12.807Z</lastmod>
+    <lastmod>2019-10-07T12:44:37.505Z</lastmod>
     <data>
         <display>
         <title>gitlab 批量恢复被删除的 repo</title>
@@ -250,82 +94,14 @@
 
     
   <url>
-    <loc>http://imqsc.xyz/2018/07/01/font-awesone-in-markdown/</loc>
-    <lastmod>2018-07-01T09:47:36.483Z</lastmod>
+    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
+    <lastmod>2019-10-07T12:44:37.505Z</lastmod>
     <data>
         <display>
-        <title>Markdown 文档中使用 font awesome</title>
-        <pubTime>2018-07-01T09:15:40.000Z</pubTime>
+        <title>通过命令行重置 GitLab 用户密码</title>
+        <pubTime>2018-03-22T02:01:41.000Z</pubTime>
         
-        <tag>markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/06/23/convert-kux-to-mp4/</loc>
-    <lastmod>2018-06-23T09:24:12.515Z</lastmod>
-    <data>
-        <display>
-        <title>优酷 kux 文件转码</title>
-        <pubTime>2018-06-23T09:14:28.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>
-    <lastmod>2018-05-18T05:32:18.652Z</lastmod>
-    <data>
-        <display>
-        <title>编译 caffe 并在 python 中使用</title>
-        <pubTime>2018-05-18T05:30:18.000Z</pubTime>
-        
-        <tag>caffe</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/05/08/xcrun-error-locate-sdk/</loc>
-    <lastmod>2018-05-16T12:42:12.996Z</lastmod>
-    <data>
-        <display>
-        <title>xcrun error SDK "xx" cannot be locateed 解决</title>
-        <pubTime>2018-05-08T09:21:46.000Z</pubTime>
-        
-        <tag>iOS</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2018/05/14/create-fastlane-action/</loc>
-    <lastmod>2018-05-16T12:34:57.949Z</lastmod>
-    <data>
-        <display>
-        <title>给 fastlane 添加自定义 action</title>
-        <pubTime>2018-05-14T06:33:19.000Z</pubTime>
-        
-        <tag>fastlane</tag>
+        <tag>GitLab</tag>
          
          
            
@@ -336,7 +112,7 @@
     
   <url>
     <loc>http://imqsc.xyz/2018/03/28/pod-install-parsing-error/</loc>
-    <lastmod>2018-05-08T09:34:32.891Z</lastmod>
+    <lastmod>2019-10-07T12:44:37.504Z</lastmod>
     <data>
         <display>
         <title>gRPC Pod install/update 时 parsing error 的处理</title>
@@ -353,16 +129,219 @@
     </url>
 
     
-    
   <url>
-    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
-    <lastmod>2018-04-13T08:09:43.799Z</lastmod>
+    <loc>http://imqsc.xyz/2018/04/13/macos-manage/</loc>
+    <lastmod>2019-10-07T12:44:37.489Z</lastmod>
     <data>
         <display>
-        <title>通过命令行重置 GitLab 用户密码</title>
-        <pubTime>2018-03-22T02:01:41.000Z</pubTime>
+        <title>mac 管理</title>
+        <pubTime>2018-04-13T08:12:42.000Z</pubTime>
         
-        <tag>GitLab</tag>
+        <tag>macos</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/07/01/markdown-details/</loc>
+    <lastmod>2019-10-07T12:44:37.489Z</lastmod>
+    <data>
+        <display>
+        <title>markdown 中使用可展开的区域 details</title>
+        <pubTime>2018-07-01T09:46:51.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/12/05/keywords-in-http/</loc>
+    <lastmod>2019-10-07T12:44:37.488Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP keywords you should know</title>
+        <pubTime>2018-12-05T14:13:58.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/12/05/horse-butt-and-space-shuttle/</loc>
+    <lastmod>2019-10-07T12:44:37.488Z</lastmod>
+    <data>
+        <display>
+        <title>马屁股决定航天飞机</title>
+        <pubTime>2018-12-05T14:31:49.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/09/09/macos-add-globle-shortcut/</loc>
+    <lastmod>2019-10-07T12:44:37.488Z</lastmod>
+    <data>
+        <display>
+        <title>给 Xcode run 添加全局快捷键</title>
+        <pubTime>2018-09-09T13:22:52.000Z</pubTime>
+        
+        <tag>Xcode</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/10/16/fswatch-and-rsync/</loc>
+    <lastmod>2019-10-07T12:44:37.487Z</lastmod>
+    <data>
+        <display>
+        <title>fswatch_and_rsync</title>
+        <pubTime>2018-10-16T05:54:50.000Z</pubTime>
+        
+        <tag>fswatch</tag>
+         
+        <tag>rsync</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/07/01/font-awesone-in-markdown/</loc>
+    <lastmod>2019-10-07T12:44:37.487Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown 文档中使用 font awesome</title>
+        <pubTime>2018-07-01T09:15:40.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
+    <lastmod>2019-10-07T12:44:37.486Z</lastmod>
+    <data>
+        <display>
+        <title>FFmpeg 水印、图片转视频</title>
+        <pubTime>2018-03-28T10:08:55.000Z</pubTime>
+        
+        <tag>ffmpeg</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
+    <lastmod>2019-10-07T12:44:37.486Z</lastmod>
+    <data>
+        <display>
+        <title>GPUImage 中的曲线滤镜</title>
+        <pubTime>2018-04-24T00:35:34.000Z</pubTime>
+        
+        <tag>GPUImage</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/06/23/convert-kux-to-mp4/</loc>
+    <lastmod>2019-10-07T12:44:37.485Z</lastmod>
+    <data>
+        <display>
+        <title>优酷 kux 文件转码</title>
+        <pubTime>2018-06-23T09:14:28.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/05/14/create-fastlane-action/</loc>
+    <lastmod>2019-10-07T12:44:37.485Z</lastmod>
+    <data>
+        <display>
+        <title>给 fastlane 添加自定义 action</title>
+        <pubTime>2018-05-14T06:33:19.000Z</pubTime>
+        
+        <tag>fastlane</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/12/02/color-convert-shader/</loc>
+    <lastmod>2019-10-07T12:44:37.484Z</lastmod>
+    <data>
+        <display>
+        <title>shader 中的颜色空间转换</title>
+        <pubTime>2018-12-02T15:59:57.000Z</pubTime>
+        
+        <tag>shader</tag>
+         
+        <tag>OpenGL</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>
+    <lastmod>2019-10-07T12:44:37.484Z</lastmod>
+    <data>
+        <display>
+        <title>编译 caffe 并在 python 中使用</title>
+        <pubTime>2018-05-18T05:30:18.000Z</pubTime>
+        
+        <tag>caffe</tag>
          
          
            
