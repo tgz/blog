@@ -39,6 +39,7 @@
   #}</a>{% if theme.footer.theme.version %} v{{ theme.version }}{% endif %}{#
 #}</div>
 {% endif %}
+ &nbsp; <a href="http://www.beian.miit.gov.cn">浙ICP备17019617号</a> 
 
 {% if theme.footer.custom_text %}
   <div class="footer-custom">{#
