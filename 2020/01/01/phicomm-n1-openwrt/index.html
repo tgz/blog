@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="手艺人">
 <meta property="og:description" content="0. why?最近想提高一下家里的网络体验，本想搞个软路由，后来发现，斐讯 N1 是一个性价比极其高的方案，家用环境完全 ok, 性能比目前服役的古董 WNDR3400 强了不知道多少倍了，拼多多上矿渣只要 80 块包邮。嗯，真香！ 1. 正常的步骤按照以下步骤来：    降级 刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略 搞个 Armbian 启动 U 盘">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-01T13:59:26.376Z">
+<meta property="og:updated_time" content="2020-01-01T14:01:02.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斐讯 N1 折腾手记">
 <meta name="twitter:description" content="0. why?最近想提高一下家里的网络体验，本想搞个软路由，后来发现，斐讯 N1 是一个性价比极其高的方案，家用环境完全 ok, 性能比目前服役的古董 WNDR3400 强了不知道多少倍了，拼多多上矿渣只要 80 块包邮。嗯，真香！ 1. 正常的步骤按照以下步骤来：    降级 刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略 搞个 Armbian 启动 U 盘">
@@ -323,7 +323,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  648
+                  665
                 </span>
               
 
@@ -371,7 +371,7 @@
 <li>Enjoy! 🎉</li>
 </ol>
 <h2 id="3-主要重点问题"><a href="#3-主要重点问题" class="headerlink" title="3. 主要重点问题"></a>3. 主要重点问题</h2><h3 id="1-降级、刷安桌系统"><a href="#1-降级、刷安桌系统" class="headerlink" title="1. 降级、刷安桌系统"></a>1. 降级、刷安桌系统</h3><p>没什么好说的，用网上的脚本一键就行了，不会存在什么问题<br>如果要刷系统，下载系统可以到 <a href="http://www.yyfrom.com/cms/yyfrom/product/2019-11-29/164.html" target="_blank" rel="noopener">YYF 官网</a> 很方便.</p>
-<h3 id="2-Armbian-系统的选择"><a href="#2-Armbian-系统的选择" class="headerlink" title="2. Armbian 系统的选择"></a>2. Armbian 系统的选择</h3><h4 id="为什么需要-Armbian"><a href="#为什么需要-Armbian" class="headerlink" title="为什么需要 Armbian?"></a>为什么需要 Armbian?</h4><p>找了网上 <a href="https://www.youtube.com/channel/UCA3gvWwB9OvQEHuX8BOIazg" target="_blank" rel="noopener">Tony</a> 的固件，主要是集成了比较多的功能吧，但是 Tony 提供的镜像，写入 U 盘并不能正常引导启动，会卡在 recovery 界面。折腾了 4 个 U 盘，反复尝试了不下 20 次，最后发现 armbian 可以正常启动。就换了思路，直接在 emmc 内写入 armbian 的系统，再替换 openwrt 的系统文件。</p>
+<h3 id="2-Armbian-系统的选择"><a href="#2-Armbian-系统的选择" class="headerlink" title="2. Armbian 系统的选择"></a>2. Armbian 系统的选择</h3><h4 id="为什么需要-Armbian"><a href="#为什么需要-Armbian" class="headerlink" title="为什么需要 Armbian?"></a>为什么需要 Armbian?</h4><p>找了网上 <a href="https://www.youtube.com/channel/UCA3gvWwB9OvQEHuX8BOIazg" target="_blank" rel="noopener">Tony</a> 的固件 <code>可以去 tony 的 TG 群下载，下载体验要好很多</code> ，主要是集成了比较多的功能吧，但是 Tony 提供的镜像，写入 U 盘并不能正常引导启动，会卡在 recovery 界面。折腾了 4 个 U 盘，反复尝试了不下 20 次，最后发现 armbian 可以正常启动。就换了思路，直接在 emmc 内写入 armbian 的系统，再替换 openwrt 的系统文件。</p>
 <h4 id="用哪个版本的-Armbian？"><a href="#用哪个版本的-Armbian？" class="headerlink" title="用哪个版本的 Armbian？"></a>用哪个版本的 Armbian？</h4><p>目前(2020 年 1 月 1 日)，armbian 的系统已经是 5.x 的内核了，而我们能比较容易找到的 openwrt 系统，基本上是 4.8.7 内核版本的。<br>起初走了很多弯路，5.x 内核的 armbain 系统写入 emmc 后替换 openwrt 内容后，启动后遇到了没有驱动网卡的问题。</p>
 <p>为了简便,我直接找了应该是当初比较火的 <a href="https://www.right.com.cn/forum/thread-394823-1-1.html" target="_blank" rel="noopener">xq7 armbian</a> 镜像, 猜测大部分 openwrt 应该都是基于这个版本做的？</p>
 <h4 id="写入后无法启动？"><a href="#写入后无法启动？" class="headerlink" title="写入后无法启动？"></a>写入后无法启动？</h4><p>这个把我折腾了很惨，经过一番折腾，有一个要点：做完镜像后，不能在安卓系统的情况下把 U 盘插入。必须在 <code>adb reboot update</code> 命令后，系统黑屏后，快速插入 U 盘。</p>
@@ -595,7 +595,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.7k</span>
+    <span title="Site words total count">7.8k</span>
   
 </div>
 
