@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="N1,phicomm,openwrt," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="0. why?最近想提高一下家里的网络体验，本想搞个软路由，后来发现，斐讯 N1 是一个性价比极其高的方案，家用环境完全 ok, 性能比目前服役的古董 WNDR3400 强了不知道多少倍了，拼多多上矿渣只要 80 块包邮。嗯，真香！ 1. 正常的步骤按照以下步骤来：    降级 刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略 搞个 Armbian 启动 U 盘">
+<meta name="keywords" content="N1,phicomm,openwrt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="斐讯 N1 折腾手记">
+<meta property="og:url" content="http://imqsc.xyz/2020/01/01/phicomm-n1-openwrt/index.html">
+<meta property="og:site_name" content="手艺人">
+<meta property="og:description" content="0. why?最近想提高一下家里的网络体验，本想搞个软路由，后来发现，斐讯 N1 是一个性价比极其高的方案，家用环境完全 ok, 性能比目前服役的古董 WNDR3400 强了不知道多少倍了，拼多多上矿渣只要 80 块包邮。嗯，真香！ 1. 正常的步骤按照以下步骤来：    降级 刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略 搞个 Armbian 启动 U 盘">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-01-01T13:59:26.376Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="斐讯 N1 折腾手记">
+<meta name="twitter:description" content="0. why?最近想提高一下家里的网络体验，本想搞个软路由，后来发现，斐讯 N1 是一个性价比极其高的方案，家用环境完全 ok, 性能比目前服役的古董 WNDR3400 强了不知道多少倍了，拼多多上矿渣只要 80 块包邮。嗯，真香！ 1. 正常的步骤按照以下步骤来：    降级 刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略 搞个 Armbian 启动 U 盘">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://imqsc.xyz/2020/01/01/phicomm-n1-openwrt/"/>
+
+
+
+
+
+  <title>斐讯 N1 折腾手记 | 手艺人</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?140b14f58adf2f4622c51968beeb1140";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">手艺人</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-male"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://imqsc.xyz/2020/01/01/phicomm-n1-openwrt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="脑补大王">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="手艺人">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">斐讯 N1 折腾手记</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-01T21:18:20+08:00">
+                2020-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  648
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="0-why"><a href="#0-why" class="headerlink" title="0. why?"></a>0. why?</h2><p>最近想提高一下家里的网络体验，本想搞个软路由，后来发现，斐讯 N1 是一个性价比极其高的方案，家用环境完全 ok, 性能比目前服役的古董 WNDR3400 强了不知道多少倍了，拼多多上矿渣只要 80 块包邮。嗯，真香！</p>
+<h2 id="1-正常的步骤"><a href="#1-正常的步骤" class="headerlink" title="1. 正常的步骤"></a>1. 正常的步骤</h2><p>按照以下步骤来：  </p>
+<ol>
+<li>降级</li>
+<li>刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略</li>
+<li>搞个 Armbian 启动 U 盘</li>
+<li>启动 U 盘内的 armbian 系统, 并将 armbian 安装到 emmc 中</li>
+<li>持载 openwrt 镜像文件，把 openwrt 第二个分区的内容，覆盖到 emmc 中</li>
+<li>Enjoy! 🎉</li>
+</ol>
+<h2 id="3-主要重点问题"><a href="#3-主要重点问题" class="headerlink" title="3. 主要重点问题"></a>3. 主要重点问题</h2><h3 id="1-降级、刷安桌系统"><a href="#1-降级、刷安桌系统" class="headerlink" title="1. 降级、刷安桌系统"></a>1. 降级、刷安桌系统</h3><p>没什么好说的，用网上的脚本一键就行了，不会存在什么问题<br>如果要刷系统，下载系统可以到 <a href="http://www.yyfrom.com/cms/yyfrom/product/2019-11-29/164.html" target="_blank" rel="noopener">YYF 官网</a> 很方便.</p>
+<h3 id="2-Armbian-系统的选择"><a href="#2-Armbian-系统的选择" class="headerlink" title="2. Armbian 系统的选择"></a>2. Armbian 系统的选择</h3><h4 id="为什么需要-Armbian"><a href="#为什么需要-Armbian" class="headerlink" title="为什么需要 Armbian?"></a>为什么需要 Armbian?</h4><p>找了网上 <a href="https://www.youtube.com/channel/UCA3gvWwB9OvQEHuX8BOIazg" target="_blank" rel="noopener">Tony</a> 的固件，主要是集成了比较多的功能吧，但是 Tony 提供的镜像，写入 U 盘并不能正常引导启动，会卡在 recovery 界面。折腾了 4 个 U 盘，反复尝试了不下 20 次，最后发现 armbian 可以正常启动。就换了思路，直接在 emmc 内写入 armbian 的系统，再替换 openwrt 的系统文件。</p>
+<h4 id="用哪个版本的-Armbian？"><a href="#用哪个版本的-Armbian？" class="headerlink" title="用哪个版本的 Armbian？"></a>用哪个版本的 Armbian？</h4><p>目前(2020 年 1 月 1 日)，armbian 的系统已经是 5.x 的内核了，而我们能比较容易找到的 openwrt 系统，基本上是 4.8.7 内核版本的。<br>起初走了很多弯路，5.x 内核的 armbain 系统写入 emmc 后替换 openwrt 内容后，启动后遇到了没有驱动网卡的问题。</p>
+<p>为了简便,我直接找了应该是当初比较火的 <a href="https://www.right.com.cn/forum/thread-394823-1-1.html" target="_blank" rel="noopener">xq7 armbian</a> 镜像, 猜测大部分 openwrt 应该都是基于这个版本做的？</p>
+<h4 id="写入后无法启动？"><a href="#写入后无法启动？" class="headerlink" title="写入后无法启动？"></a>写入后无法启动？</h4><p>这个把我折腾了很惨，经过一番折腾，有一个要点：做完镜像后，不能在安卓系统的情况下把 U 盘插入。必须在 <code>adb reboot update</code> 命令后，系统黑屏后，快速插入 U 盘。</p>
+<p>U 盘的选择也很重要，最好是 Sandisk 的。两方面原因：网友反馈 &amp; 个人经验。</p>
+<p>如果想确认 U 盘是否支持，可以先 <a href="https://disk.yandex.ru/d/pHxaRAs-tZiei" target="_blank" rel="noopener">挑个 armbian 的系统</a> 写入验证一下能否 U 盘启动。</p>
+<h2 id="4-Reference"><a href="#4-Reference" class="headerlink" title="4. Reference"></a>4. Reference</h2><p><a href="https://yuerblog.cc/2019/10/23/斐讯n1-完美刷机armbian教程/" target="_blank" rel="noopener">https://yuerblog.cc/2019/10/23/斐讯n1-完美刷机armbian教程/</a><br><a href="https://www.right.com.cn/forum/thread-737893-1-1.html" target="_blank" rel="noopener">https://www.right.com.cn/forum/thread-737893-1-1.html</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/N1/" rel="tag"># N1</a>
+          
+            <a href="/tags/phicomm/" rel="tag"># phicomm</a>
+          
+            <a href="/tags/openwrt/" rel="tag"># openwrt</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/12/try-appcenter-ms/" rel="next" title="appcenter.ms 初体验">
+                <i class="fa fa-chevron-left"></i> appcenter.ms 初体验
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div id="gitalk-container"></div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">脑补大王</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/tgz" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:qiu6288@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-why"><span class="nav-number">1.</span> <span class="nav-text">0. why?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-正常的步骤"><span class="nav-number">2.</span> <span class="nav-text">1. 正常的步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-主要重点问题"><span class="nav-number">3.</span> <span class="nav-text">3. 主要重点问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-降级、刷安桌系统"><span class="nav-number">3.1.</span> <span class="nav-text">1. 降级、刷安桌系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Armbian-系统的选择"><span class="nav-number">3.2.</span> <span class="nav-text">2. Armbian 系统的选择</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么需要-Armbian"><span class="nav-number">3.2.1.</span> <span class="nav-text">为什么需要 Armbian?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用哪个版本的-Armbian？"><span class="nav-number">3.2.2.</span> <span class="nav-text">用哪个版本的 Armbian？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写入后无法启动？"><span class="nav-number">3.2.3.</span> <span class="nav-text">写入后无法启动？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Reference"><span class="nav-number">4.</span> <span class="nav-text">4. Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">脑补大王</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">7.7k</span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a></div>
+
+ &nbsp; <a href="http://www.beian.miit.gov.cn">浙ICP备17019617号</a> 
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<!-- END LOCAL -->
+      <script type="text/javascript">
+          let str = location.pathname
+          if(str.substr(str.length-1,str.length)=="/") {
+            str=str.substr(0,str.length-1);
+          }
+          let index = str.lastIndexOf("\/");  
+          str  = str.substring(index + 1, str.length);
+          var gitalk = new Gitalk({
+               clientID: '9bde4712cb898ab20b11',
+               clientSecret: '2709bff635499e039c96ce342c0dd493bafea8a7',
+               repo: 'blog',
+               owner: 'tgz',
+               admin: ['tgz'],
+               title: '斐讯 N1 折腾手记',
+               id: str,      // Ensure uniqueness and length less than 50
+               distractionFreeMode: false  // Facebook-like distraction free mode
+               });
+        gitalk.render('gitalk-container');
+      </script>
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
