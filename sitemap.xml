@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://imqsc.xyz/about/index.html</loc>
+    
+    <lastmod>2020-02-06T02:33:22.838Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://imqsc.xyz/about/Project.html</loc>
+    
+    <lastmod>2020-02-06T02:31:35.019Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://imqsc.xyz/about/Read.html</loc>
+    
+    <lastmod>2020-02-06T02:10:27.649Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://imqsc.xyz/2020/01/01/youtube-original-ai/</loc>
     
     <lastmod>2020-02-06T01:52:43.123Z</lastmod>
@@ -19,13 +40,6 @@
     <loc>http://imqsc.xyz/tags/index.html</loc>
     
     <lastmod>2019-10-07T12:44:37.509Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://imqsc.xyz/about/index.html</loc>
-    
-    <lastmod>2019-10-07T12:44:37.508Z</lastmod>
     
   </url>
   
@@ -65,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
+    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
     
     <lastmod>2019-10-07T12:44:37.505Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
+    <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
     
     <lastmod>2019-10-07T12:44:37.505Z</lastmod>
     
@@ -100,7 +114,7 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/12/05/horse-butt-and-space-shuttle/</loc>
+    <loc>http://imqsc.xyz/2018/12/05/keywords-in-http/</loc>
     
     <lastmod>2019-10-07T12:44:37.488Z</lastmod>
     
@@ -114,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/12/05/keywords-in-http/</loc>
+    <loc>http://imqsc.xyz/2018/12/05/horse-butt-and-space-shuttle/</loc>
     
     <lastmod>2019-10-07T12:44:37.488Z</lastmod>
     
