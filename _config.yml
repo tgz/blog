@@ -91,11 +91,11 @@ deploy:
     delete: true
     verbose: true
     ignore_errors: false
-  - type: rsync
-    host: ss.imqsc.xyz
-    user: qsc
-    root: /home/qsc/blog
-    port: 22
-    delete: true
-    verbose: true
-    ignore_errors: false
+  # - type: rsync
+  #   host: ss.imqsc.xyz
+  #   user: qsc
+  #   root: /home/qsc/blog
+  #   port: 22
+  #   delete: true
+  #   verbose: true
+  #   ignore_errors: false
