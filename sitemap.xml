@@ -4,14 +4,14 @@
   <url>
     <loc>http://imqsc.xyz/about/index.html</loc>
     
-    <lastmod>2020-02-06T02:54:11.723Z</lastmod>
+    <lastmod>2020-02-08T07:11:42.478Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://imqsc.xyz/about/Project.html</loc>
     
-    <lastmod>2020-02-06T02:31:35.019Z</lastmod>
+    <lastmod>2020-02-06T02:58:13.790Z</lastmod>
     
   </url>
   
@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
+    <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
     
     <lastmod>2019-10-07T12:44:37.505Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
+    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
     
     <lastmod>2019-10-07T12:44:37.505Z</lastmod>
     
@@ -100,14 +100,14 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/04/13/macos-manage/</loc>
+    <loc>http://imqsc.xyz/2018/07/01/markdown-details/</loc>
     
     <lastmod>2019-10-07T12:44:37.489Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/07/01/markdown-details/</loc>
+    <loc>http://imqsc.xyz/2018/04/13/macos-manage/</loc>
     
     <lastmod>2019-10-07T12:44:37.489Z</lastmod>
     
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/09/09/macos-add-globle-shortcut/</loc>
+    <loc>http://imqsc.xyz/2018/12/05/keywords-in-http/</loc>
     
     <lastmod>2019-10-07T12:44:37.488Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/12/05/keywords-in-http/</loc>
+    <loc>http://imqsc.xyz/2018/09/09/macos-add-globle-shortcut/</loc>
     
     <lastmod>2019-10-07T12:44:37.488Z</lastmod>
     
@@ -163,13 +163,6 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/06/23/convert-kux-to-mp4/</loc>
-    
-    <lastmod>2019-10-07T12:44:37.485Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://imqsc.xyz/2018/05/14/create-fastlane-action/</loc>
     
     <lastmod>2019-10-07T12:44:37.485Z</lastmod>
@@ -177,14 +170,21 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>
+    <loc>http://imqsc.xyz/2018/06/23/convert-kux-to-mp4/</loc>
+    
+    <lastmod>2019-10-07T12:44:37.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://imqsc.xyz/2018/12/02/color-convert-shader/</loc>
     
     <lastmod>2019-10-07T12:44:37.484Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/12/02/color-convert-shader/</loc>
+    <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>
     
     <lastmod>2019-10-07T12:44:37.484Z</lastmod>
     
