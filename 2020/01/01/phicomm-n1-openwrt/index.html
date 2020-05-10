@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="手艺人">
 <meta property="og:description" content="0. why?最近想提高一下家里的网络体验，本想搞个软路由，后来发现，斐讯 N1 是一个性价比极其高的方案，家用环境完全 ok, 性能比目前服役的古董 WNDR3400 强了不知道多少倍了，拼多多上矿渣只要 80 块包邮。嗯，真香！ 1. 正常的步骤按照以下步骤来：    降级 刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略 制作 Armbian 启动 U 盘">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-10T13:40:25.184Z">
+<meta property="og:updated_time" content="2020-05-10T13:51:48.433Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斐讯 N1 折腾手记">
 <meta name="twitter:description" content="0. why?最近想提高一下家里的网络体验，本想搞个软路由，后来发现，斐讯 N1 是一个性价比极其高的方案，家用环境完全 ok, 性能比目前服役的古董 WNDR3400 强了不知道多少倍了，拼多多上矿渣只要 80 块包邮。嗯，真香！ 1. 正常的步骤按照以下步骤来：    降级 刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略 制作 Armbian 启动 U 盘">
@@ -323,7 +323,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  722
+                  757
                 </span>
               
 
@@ -391,6 +391,8 @@
 <h4 id="写入后无法启动？"><a href="#写入后无法启动？" class="headerlink" title="写入后无法启动？"></a>写入后无法启动？</h4><p>这个把我折腾了很惨，经过一番折腾，有一个要点：做完镜像后，不能在安卓系统的情况下把 U 盘插入。必须在 <code>adb reboot update</code> 命令后，系统黑屏后，快速插入 U 盘。</p>
 <p>U 盘的选择也很重要，最好是 Sandisk 的。两方面原因：网友反馈 &amp; 个人经验。</p>
 <p>如果想确认 U 盘是否支持，可以先 <a href="https://disk.yandex.ru/d/pHxaRAs-tZiei" target="_blank" rel="noopener">挑个 armbian 的系统</a> 写入验证一下能否 U 盘启动。</p>
+<h4 id="修改-N1-为-DHCP-模式"><a href="#修改-N1-为-DHCP-模式" class="headerlink" title="修改 N1 为 DHCP 模式"></a>修改 N1 为 DHCP 模式</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/config/network</span><br></pre></td></tr></table></figure>
+<p>修改 <code>interface &#39;lan&#39;</code> 的配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">config interface &apos;lan&apos;</span><br><span class="line">    option type &apos;bridge&apos;</span><br><span class="line">    option ifname &apos;eth0&apos;</span><br><span class="line">    option proto &apos;dhcp&apos;</span><br></pre></td></tr></table></figure></p>
 <h2 id="4-Reference"><a href="#4-Reference" class="headerlink" title="4. Reference"></a>4. Reference</h2><p><a href="https://disk.longe.xyz/N1/OpenWrt/" target="_blank" rel="noopener">https://disk.longe.xyz/N1/OpenWrt/</a><br><a href="https://yuerblog.cc/2019/10/23/斐讯n1-完美刷机armbian教程/" target="_blank" rel="noopener">https://yuerblog.cc/2019/10/23/斐讯n1-完美刷机armbian教程/</a><br><a href="https://www.right.com.cn/forum/thread-737893-1-1.html" target="_blank" rel="noopener">https://www.right.com.cn/forum/thread-737893-1-1.html</a></p>
 
       
@@ -579,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-why"><span class="nav-number">1.</span> <span class="nav-text">0. why?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-正常的步骤"><span class="nav-number">2.</span> <span class="nav-text">1. 正常的步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-主要重点问题"><span class="nav-number">3.</span> <span class="nav-text">3. 主要重点问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-降级、刷安桌系统"><span class="nav-number">3.1.</span> <span class="nav-text">1. 降级、刷安桌系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Armbian-系统的选择"><span class="nav-number">3.2.</span> <span class="nav-text">2. Armbian 系统的选择</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么需要-Armbian"><span class="nav-number">3.2.1.</span> <span class="nav-text">为什么需要 Armbian?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用哪个版本的-Armbian？"><span class="nav-number">3.2.2.</span> <span class="nav-text">用哪个版本的 Armbian？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写入后无法启动？"><span class="nav-number">3.2.3.</span> <span class="nav-text">写入后无法启动？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Reference"><span class="nav-number">4.</span> <span class="nav-text">4. Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-why"><span class="nav-number">1.</span> <span class="nav-text">0. why?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-正常的步骤"><span class="nav-number">2.</span> <span class="nav-text">1. 正常的步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-主要重点问题"><span class="nav-number">3.</span> <span class="nav-text">3. 主要重点问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-降级、刷安桌系统"><span class="nav-number">3.1.</span> <span class="nav-text">1. 降级、刷安桌系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Armbian-系统的选择"><span class="nav-number">3.2.</span> <span class="nav-text">2. Armbian 系统的选择</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么需要-Armbian"><span class="nav-number">3.2.1.</span> <span class="nav-text">为什么需要 Armbian?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用哪个版本的-Armbian？"><span class="nav-number">3.2.2.</span> <span class="nav-text">用哪个版本的 Armbian？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写入后无法启动？"><span class="nav-number">3.2.3.</span> <span class="nav-text">写入后无法启动？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-N1-为-DHCP-模式"><span class="nav-number">3.2.4.</span> <span class="nav-text">修改 N1 为 DHCP 模式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Reference"><span class="nav-number">4.</span> <span class="nav-text">4. Reference</span></a></li></ol></div>
             
 
           </div>
@@ -613,7 +615,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.0k</span>
+    <span title="Site words total count">8.1k</span>
   
 </div>
 
