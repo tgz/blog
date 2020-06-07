@@ -64,6 +64,23 @@
     
     
   <url>
+    <loc>http://imqsc.xyz/2019/01/12/try-appcenter-ms/</loc>
+    <lastmod>2019-10-07T12:44:37.506Z</lastmod>
+    <data>
+        <display>
+        <title>appcenter.ms 初体验</title>
+        <pubTime>2019-01-12T04:37:21.000Z</pubTime>
+        
+        <tag>CI</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://imqsc.xyz/2018/06/22/ubuntu-docker-without-sudo/</loc>
     <lastmod>2019-10-07T12:44:37.506Z</lastmod>
     <data>
@@ -74,23 +91,6 @@
         <tag>ubuntu</tag>
          
         <tag>docker</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imqsc.xyz/2019/01/12/try-appcenter-ms/</loc>
-    <lastmod>2019-10-07T12:44:37.506Z</lastmod>
-    <data>
-        <display>
-        <title>appcenter.ms 初体验</title>
-        <pubTime>2019-01-12T04:37:21.000Z</pubTime>
-        
-        <tag>CI</tag>
          
          
            
