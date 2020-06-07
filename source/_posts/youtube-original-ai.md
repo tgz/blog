@@ -1,10 +1,11 @@
 ---
 title: Youtube Original [THE AGE OF AI]
-date: 2020-01-01 22:38:52
+date: 2020-02-01 22:38:52
 tags: drama
 ---
 
 记录一下 Youtube 原生剧《THE AGE OF AI》
+感受在 AI 的加持下，人类对生存做出的「改善」。
 
 ## E01
 0. 陪伴机器人
@@ -25,4 +26,7 @@ tags: drama
 4. 消防队：烟雾中的视觉增强
 
 ## E04
-
+1. Soul mate dolls. 理解人的感情。
+2. Virtual friends in smartphone.(微软小冰)
+3. AI 编剧。创造性思维的 AI.
+4. AI 赛车手

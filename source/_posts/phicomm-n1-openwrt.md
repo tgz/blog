@@ -16,9 +16,19 @@ tags:
 按照以下步骤来：  
 1. 降级
 2. 刷个安桌电视系统（我选了 YYF 的，主要是下载到最新版方便），这一步应该可以忽略
-3. 搞个 Armbian 启动 U 盘
+3. 制作 Armbian 启动 U 盘
 4. 启动 U 盘内的 armbian 系统, 并将 armbian 安装到 emmc 中
+    * /boot/create-mbr-linux.sh
+    * /root/install.sh
 5. 持载 openwrt 镜像文件，把 openwrt 第二个分区的内容，覆盖到 emmc 中
+    * scp openwrt_file_path root@ip_of_n1:/root/
+    * mkdir /tmp/emmc2
+    * mount /dev/mmcblk1p2 /tmp/emmc2
+    * rm -rf /tmp/emmc2/*
+    * losetup -f -P --show /root/open_wrt_file.img
+    * mount /dev/loop0p2 /media
+    * cp -R /media/* /tmp/emmc2
+    * umount /dev/loop0p2; losetup -d /dev/loop0 ; umount /dev/mmcblk1p2
 6. Enjoy! 🎉
 
 ## 3. 主要重点问题
@@ -35,7 +45,7 @@ tags:
 
 #### 用哪个版本的 Armbian？
 
-目前(2020 年 1 月 1 日)，armbian 的系统已经是 5.x 的内核了，而我们能比较容易找到的 openwrt 系统，基本上是 4.8.7 内核版本的。
+目前(2020 年 1 月 1 日)，armbian 的系统已经是 5.x 的内核了，而我们能比较容易找到的 openwrt 系统，基本上是 4.18.7 内核版本的。
 起初走了很多弯路，5.x 内核的 armbain 系统写入 emmc 后替换 openwrt 内容后，启动后遇到了没有驱动网卡的问题。
 
 为了简便,我直接找了应该是当初比较火的 [xq7 armbian](https://www.right.com.cn/forum/thread-394823-1-1.html) 镜像, 猜测大部分 openwrt 应该都是基于这个版本做的？
@@ -47,6 +57,20 @@ tags:
 U 盘的选择也很重要，最好是 Sandisk 的。两方面原因：网友反馈 & 个人经验。
 
 如果想确认 U 盘是否支持，可以先 [挑个 armbian 的系统](https://disk.yandex.ru/d/pHxaRAs-tZiei) 写入验证一下能否 U 盘启动。
+
+#### 修改 N1 为 DHCP 模式
+
+```bash
+vim /etc/config/network
+```
+
+修改 `interface 'lan' ` 的配置
+```
+config interface 'lan'
+    option type 'bridge'
+    option ifname 'eth0'
+    option proto 'dhcp'
+```
 
 ## 4. Reference
 [https://disk.longe.xyz/N1/OpenWrt/](https://disk.longe.xyz/N1/OpenWrt/)
