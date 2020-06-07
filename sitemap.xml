@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://imqsc.xyz/about/index.html</loc>
+    
+    <lastmod>2020-06-07T06:06:24.976Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://imqsc.xyz/2020/01/01/phicomm-n1-openwrt/</loc>
     
     <lastmod>2020-05-10T13:51:48.433Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://imqsc.xyz/2020/02/01/youtube-original-ai/</loc>
     
     <lastmod>2020-02-10T02:29:51.407Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://imqsc.xyz/about/index.html</loc>
-    
-    <lastmod>2020-02-08T07:14:10.231Z</lastmod>
     
   </url>
   
@@ -79,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
+    <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
     
     <lastmod>2019-10-07T12:44:37.505Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
+    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
     
     <lastmod>2019-10-07T12:44:37.505Z</lastmod>
     
