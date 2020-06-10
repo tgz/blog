@@ -4,7 +4,7 @@
   <url>
     <loc>http://imqsc.xyz/about/index.html</loc>
     
-    <lastmod>2020-06-09T13:59:18.908Z</lastmod>
+    <lastmod>2020-06-10T07:34:59.235Z</lastmod>
     
   </url>
   
@@ -135,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/10/16/fswatch-and-rsync/</loc>
-    
-    <lastmod>2019-10-07T12:44:37.487Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://imqsc.xyz/2018/07/01/font-awesone-in-markdown/</loc>
     
     <lastmod>2019-10-07T12:44:37.487Z</lastmod>
@@ -149,9 +142,9 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
+    <loc>http://imqsc.xyz/2018/10/16/fswatch-and-rsync/</loc>
     
-    <lastmod>2019-10-07T12:44:37.486Z</lastmod>
+    <lastmod>2019-10-07T12:44:37.487Z</lastmod>
     
   </url>
   
@@ -163,9 +156,9 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/05/14/create-fastlane-action/</loc>
+    <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
     
-    <lastmod>2019-10-07T12:44:37.485Z</lastmod>
+    <lastmod>2019-10-07T12:44:37.486Z</lastmod>
     
   </url>
   
@@ -177,14 +170,21 @@
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/12/02/color-convert-shader/</loc>
+    <loc>http://imqsc.xyz/2018/05/14/create-fastlane-action/</loc>
+    
+    <lastmod>2019-10-07T12:44:37.485Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>
     
     <lastmod>2019-10-07T12:44:37.484Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>
+    <loc>http://imqsc.xyz/2018/12/02/color-convert-shader/</loc>
     
     <lastmod>2019-10-07T12:44:37.484Z</lastmod>
     
