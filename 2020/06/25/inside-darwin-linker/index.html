@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="原文链接：https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html   单词释义 Darwin ：苹果 macos 系统内核名称 linker: 链接器：组合不同代码文件编译结果，输出可执行文件或库 Atoms: 原子，此处可代表程序代码中的基本元素  简介Darwin Linker 是新一代链接器, 它不像">
+<meta name="description" content="原文链接：https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html 简介Darwin Linker 是新一代链接器, 它不像其它传统 Linker 把不同 object 文件中的各部分混和在一起。Darwin linker 基于「原子」，基于文件片段的传统 linker 可以处理简单的链接任务，但是这种模型想实">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Inside the Linker">
 <meta property="og:url" content="http://imqsc.xyz/2020/06/25/inside-darwin-linker/index.html">
 <meta property="og:site_name" content="手艺人">
-<meta property="og:description" content="原文链接：https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html   单词释义 Darwin ：苹果 macos 系统内核名称 linker: 链接器：组合不同代码文件编译结果，输出可执行文件或库 Atoms: 原子，此处可代表程序代码中的基本元素  简介Darwin Linker 是新一代链接器, 它不像">
+<meta property="og:description" content="原文链接：https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html 简介Darwin Linker 是新一代链接器, 它不像其它传统 Linker 把不同 object 文件中的各部分混和在一起。Darwin linker 基于「原子」，基于文件片段的传统 linker 可以处理简单的链接任务，但是这种模型想实">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://imqsc.xyz/2020/06/25/inside-darwin-linker/horse-butt-and-space-shuttle.png">
 <meta property="og:image" content="http://imqsc.xyz/2020/06/25/inside-darwin-linker/bindings.png">
-<meta property="og:updated_time" content="2020-06-25T13:19:30.957Z">
+<meta property="og:updated_time" content="2020-06-25T15:10:21.137Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the Linker">
-<meta name="twitter:description" content="原文链接：https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html   单词释义 Darwin ：苹果 macos 系统内核名称 linker: 链接器：组合不同代码文件编译结果，输出可执行文件或库 Atoms: 原子，此处可代表程序代码中的基本元素  简介Darwin Linker 是新一代链接器, 它不像">
+<meta name="twitter:description" content="原文链接：https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html 简介Darwin Linker 是新一代链接器, 它不像其它传统 Linker 把不同 object 文件中的各部分混和在一起。Darwin linker 基于「原子」，基于文件片段的传统 linker 可以处理简单的链接任务，但是这种模型想实">
 <meta name="twitter:image" content="http://imqsc.xyz/2020/06/25/inside-darwin-linker/horse-butt-and-space-shuttle.png">
 
 
@@ -325,7 +325,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,120
+                  4,063
                 </span>
               
 
@@ -362,15 +362,7 @@
       
 
       
-        <blockquote>
-<p>原文链接：<a href="https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html" target="_blank" rel="noopener">https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html</a></p>
-</blockquote>
-<blockquote>
-<p>单词释义</p>
-<p>Darwin ：苹果 macos 系统内核名称</p>
-<p>linker: 链接器：组合不同代码文件编译结果，输出可执行文件或库</p>
-<p>Atoms: 原子，此处可代表程序代码中的基本元素</p>
-</blockquote>
+        <p>原文链接：<a href="https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html" target="_blank" rel="noopener">https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html</a></p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Darwin Linker 是新一代链接器, 它不像其它传统 Linker 把不同 object 文件中的各部分混和在一起。Darwin linker 基于「原子」，基于文件片段的传统 linker 可以处理简单的链接任务，但是这种模型想实现高级链接功能时会比较困难，如针对未使用代码的裁剪、函数位置重排、C++ 代码聚合等需要链接器在更细粒度上工作的部分。</p>
 <p>「原子」是一个不可分割的代码或数据块。一个原子有一组属性，如：名称、作用域、内容类型、对齐方式等。一个原子还有一个连接线列表（Fixups）。一个 fixup 包含：类型、偏移量 (可选)、附加数据(可选)和目标原子(可选)。</p>
 <p>原子模型使得链接器能够使用标准图模型来表示链接的数据结构 (原子图)。每个原子是一个节点，每个Fixup是一条边。无用代码裁剪的功能是通过跟踪边来标记所有活原子，然后删除非活原子来实现的。</p>
@@ -715,7 +707,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">12.2k</span>
+    <span title="Site words total count">12.1k</span>
   
 </div>
 
