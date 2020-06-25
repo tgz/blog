@@ -87,8 +87,8 @@
 <meta property="og:description" content="原文链接：https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html   单词释义 Darwin ：苹果 macos 系统内核名称 linker: 链接器：组合不同代码文件编译结果，输出可执行文件或库 Atoms: 原子，此处可代表程序代码中的基本元素  简介Darwin Linker 是新一代链接器, 它不像">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://imqsc.xyz/.xyz//horse-butt-and-space-shuttle.png">
-<meta property="og:image" content="http://imqsc.xyz/.xyz//qsc/blog/source/_posts/inside-darwin-linker/bindings.png">
-<meta property="og:updated_time" content="2020-06-25T08:44:50.245Z">
+<meta property="og:image" content="http://imqsc.xyz/.xyz//bindings.png">
+<meta property="og:updated_time" content="2020-06-25T13:08:27.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Inside the Linker">
 <meta name="twitter:description" content="原文链接：https://opensource.apple.com/source/ld64/ld64-136/doc/design/linker.html   单词释义 Darwin ：苹果 macos 系统内核名称 linker: 链接器：组合不同代码文件编译结果，输出可执行文件或库 Atoms: 原子，此处可代表程序代码中的基本元素  简介Darwin Linker 是新一代链接器, 它不像">
@@ -396,7 +396,7 @@
 <p>链接器支持按名称和按内容进行合并。按名称合并用于暂定定义和弱引用。按内容合并用于合并常量数据。</p>
 <p>当一个原子对另一个原子有引用 (FixUp) 时，也有一个绑定类型：按名称绑定、直接绑定或间接绑定。如果绑定类型是名称，则这个 Fixup 会包含一个特殊的联合体，联合体内部是一个指向 C 字符串的指针。如果绑定类型是直接的，则联合体内是指向 Atom 的指针。如果绑定类型是间接的，联合体是指向原子指针表的索引。</p>
 <p>下面是绑定类型的图示：</p>
-<p><img src="/.xyz//qsc/blog/source/_posts/inside-darwin-linker/bindings.png" alt="binding types graphic"></p>
+<p><img src="/.xyz//bindings.png" alt="binding types graphic"></p>
 <p>输入文件的原子只包含直接引用和按名引用两种形式。直接引用用于同一对象文件中定义的原子，目标原子要么未命名，要么不能改变。例如，在一个函数中调用静态函数将生成一个对静态函数原子的直接引用。另外，函数的 FDE（dwarf unwind info）也有对其函数的直接引用。另外，全局符号的引用（如调用printf）在目标文件中使用名称绑定。</p>
 <p>解析过程中会维护一些全局链接的 “状态”，包括：”符号表” 是字符串到原子的映射，间接符号表是一个保存原子指针的变长数组，每一种可聚合的常量都有一个原子的表。通过这种数据结构，链接器遍历所有输入文件中的所有原子。对于每个原子，它检查该原子是否应该在一个符号表或一个聚合表中。如果是，它就会尝试添加该原子。如果在该表中已经有一个匹配的原子，这意味着当前原子需要与找到的原子进行聚合。</p>
 <p>为了支持聚合，所有对可聚合原子的引用都改为间接绑定，并在间接表中添加一个条目，该条目指向当前选择的原子。当解析器处理完所有输入原子后，应该只剩下直接绑定和间接绑定。如果间接表中有任何 NULL 条目，则意味着有未定义的引用。然后，链接器会查找提供的库（包括静态和动态库）来解析这些引用。</p>
