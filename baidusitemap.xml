@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://imqsc.xyz/2020/07/09/Raspberry-pi-camera-live/</loc>
-    <lastmod>2020-07-09T16:22:19.742Z</lastmod>
+    <lastmod>2020-07-09T16:24:11.366Z</lastmod>
     <data>
         <display>
         <title>使用树梅派 ffmpeg 直播 USB 摄像头</title>
@@ -302,23 +302,6 @@
 
     
   <url>
-    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
-    <lastmod>2019-10-07T12:44:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>通过命令行重置 GitLab 用户密码</title>
-        <pubTime>2018-03-22T02:01:41.000Z</pubTime>
-        
-        <tag>GitLab</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://imqsc.xyz/2018/03/28/pod-install-parsing-error/</loc>
     <lastmod>2019-10-07T12:44:37.000Z</lastmod>
     <data>
@@ -329,6 +312,23 @@
         <tag>CocoaPods</tag>
          
         <tag>iOS</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
+    <lastmod>2019-10-07T12:44:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>通过命令行重置 GitLab 用户密码</title>
+        <pubTime>2018-03-22T02:01:41.000Z</pubTime>
+        
+        <tag>GitLab</tag>
          
          
            

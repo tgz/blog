@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="手艺人">
 <meta property="og:description" content="0x00 系统安装、软件安装这里选择使用官方提供的 Raspberry Pi OS下载桌面版即可 Raspberry Pi OS (32-bit) with desktop Image with desktop based on Debian Buster, 笔者下载的版本为 May 2020  注意，桌面版系统，烧录后，默认 SSH Server 未打开，无法直接 ssh 连接进行配置，需要使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-07-09T16:22:19.742Z">
+<meta property="og:updated_time" content="2020-07-09T16:24:11.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树梅派 ffmpeg 直播 USB 摄像头">
 <meta name="twitter:description" content="0x00 系统安装、软件安装这里选择使用官方提供的 Raspberry Pi OS下载桌面版即可 Raspberry Pi OS (32-bit) with desktop Image with desktop based on Debian Buster, 笔者下载的版本为 May 2020  注意，桌面版系统，烧录后，默认 SSH Server 未打开，无法直接 ssh 连接进行配置，需要使用">
@@ -323,7 +323,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  759
+                  778
                 </span>
               
 
@@ -368,8 +368,8 @@
 <p>SD 卡烧录成功后，正常开机即可。</p>
 <p>打开 SSH 参见 <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/" target="_blank" rel="noopener">官方文档</a></p>
 <h2 id="0x01-摄像头检查"><a href="#0x01-摄像头检查" class="headerlink" title="0x01 摄像头检查"></a>0x01 摄像头检查</h2><p>检查摄像头可以使用 lsusb + v4l2-ctl 命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v4l2-ctl --list-devices</span><br></pre></td></tr></table></figure>
-<p>笔者在使用一款红外摄像头，机芯控制指令采用 UVC 协议中的 Zoom (Absolute) 通道，可以通过发送 v2l2 控制命令，向摄像头发送指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#列出所有的 USB 设备 </span><br><span class="line">lsusb</span><br><span class="line"></span><br><span class="line">#列出视频设备</span><br><span class="line">v4l2-ctl --list-devices</span><br></pre></td></tr></table></figure>
+<p>笔者在使用一款红外摄像头，机芯控制指令采用 UVC 协议中的 Zoom (Absolute) 通道，可以通过发送 v4l2 控制命令，向摄像头发送指令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">v4l2-ctl -c zoom_absolute=0x8802</span><br></pre></td></tr></table></figure>
 <p>能够看到摄像头硬件的情况下，可以打开系统自带的 VLC，打开设备，可以直接看到摄像头画面，说明摄像头硬件、驱动正常</p>
 <h2 id="0x02-直播测试"><a href="#0x02-直播测试" class="headerlink" title="0x02 直播测试"></a>0x02 直播测试</h2><p>推流使用 FFMPEG, 树梅派系统自带</p>
