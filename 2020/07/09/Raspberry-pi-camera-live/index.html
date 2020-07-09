@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="手艺人">
 <meta property="og:description" content="0x00 系统安装、软件安装这里选择使用官方提供的 Raspberry Pi OS下载桌面版即可 Raspberry Pi OS (32-bit) with desktop Image with desktop based on Debian Buster, 笔者下载的版本为 May 2020  注意，桌面版系统，烧录后，默认 SSH Server 未打开，无法直接 ssh 连接进行配置，需要使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-07-09T16:27:53.831Z">
+<meta property="og:updated_time" content="2020-07-09T16:32:26.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用树梅派 ffmpeg 进行 USB 摄像头画面直播">
 <meta name="twitter:description" content="0x00 系统安装、软件安装这里选择使用官方提供的 Raspberry Pi OS下载桌面版即可 Raspberry Pi OS (32-bit) with desktop Image with desktop based on Debian Buster, 笔者下载的版本为 May 2020  注意，桌面版系统，烧录后，默认 SSH Server 未打开，无法直接 ssh 连接进行配置，需要使用">
@@ -323,7 +323,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  777
+                  778
                 </span>
               
 
@@ -384,7 +384,7 @@
 <p>将 SRS 跑起来后，树梅派推本地测试：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg -f v4l2 -i /dev/video0\</span><br><span class="line">  -vcodec libx264 -preset:v ultrafast -tune:v zerolatency \</span><br><span class="line">  -r 25 -s 256x196 -pix_fmt yuv420p \</span><br><span class="line">  -f flv rtmp://127.0.0.1:1935/live/out</span><br><span class="line">  </span><br><span class="line">  #这里做了额外的操作：将数据转换为 yuv420 ,某些播放器没兼容 YUV422 会导致画面异常</span><br></pre></td></tr></table></figure>
 <h2 id="0x04-WiFi-配置"><a href="#0x04-WiFi-配置" class="headerlink" title="0x04 WiFi 配置"></a>0x04 WiFi 配置</h2><p>先来个官方文档，按照这个步骤，可以设置 2.4G WiFi<br><a href="https://www.raspberrypi.org/documentation/configuration/wireless/access-point-routed.md" target="_blank" rel="noopener">Setting up a Raspberry Pi as a routed wireless access point</a></p>
-<p>为了获得更好的传输带宽，可以选择配置 5G 模式<br>需要在 <code>/etc/hostapd/hostapd.conf</code> 文件内容</p>
+<p>如果想获得更好的传输带宽，可以选择配置 5G 模式<br>需要在 <code>/etc/hostapd/hostapd.conf</code> 文件内容</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">country_code=US</span><br><span class="line">interface=wlan0</span><br><span class="line"></span><br><span class="line">ssid=NameOfNetwork</span><br><span class="line">wpa_passphrase=AardvarkBadgerHedgehog</span><br><span class="line"></span><br><span class="line">hw_mode=a</span><br><span class="line">channel=149</span><br><span class="line"></span><br><span class="line">ieee80211n=1</span><br><span class="line">ieee80211ac=1</span><br><span class="line">ieee80211d=1</span><br><span class="line">ieee80211h=1</span><br><span class="line">require_ht=1</span><br><span class="line">require_vht=1</span><br><span class="line">wmm_enabled=1</span><br><span class="line"></span><br><span class="line">vht_oper_chwidth=1</span><br><span class="line">vht_oper_centr_freq_seg0_idx=155</span><br><span class="line">ht_capab=[HT40-][HT40+][SHORT-GI-40][DSSS_CCK-40]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">wpa=2</span><br><span class="line">wpa_key_mgmt=WPA-PSK</span><br><span class="line">rsn_pairwise=CCMP</span><br></pre></td></tr></table></figure>
 <h2 id="0x05-配置开机启动"><a href="#0x05-配置开机启动" class="headerlink" title="0x05 配置开机启动"></a>0x05 配置开机启动</h2><ol>
 <li>先写个脚本，一键启动 SRS+ RTMP 推流</li>
