@@ -3,7 +3,7 @@ type = "webpack"
 account_id = "c513013a720b565cc1ff42ba0f604a13"
 workers_dev = true
 route = "blog.imqsc.xyz"
-zone_id = ""
+zone_id = "47d4dc2606edd786513a2f85d40a508a"
 
 [site]
 bucket = "./public"
