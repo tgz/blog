@@ -41,4 +41,4 @@ jobs:
       # 完成 npm i 后，hexo 已经被链接到 node_modules 下的 bin 目录、并被注册在 Node.js 的 $PATH 中
       # Hexo 博客的 package.json 中默认注册了这些 script：clean/build/deploy/server
       # 因此，在目录下执行 npm run build 等同于执行 hexo g，但是不需要全局安装 hexo-cli
-      - run: npm run build
+      - run: npx hexo g
