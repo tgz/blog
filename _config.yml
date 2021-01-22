@@ -82,9 +82,13 @@ deploy:
     repo:
       gitee: git@gitee.com:qqsscc/qqsscc.git
     branch: master
+  - type: git
+    repo:
+      gitee: git@github.com:tgz/blog.git
+    branch: gh-pages
 
   - type: rsync
-    host: blog.imqsc.xyz
+    host: imqsc.com
     user: root
     root: /data/blog
     port: 22
