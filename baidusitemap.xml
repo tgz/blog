@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2021/05/08/setup-webrtc-tun-server/</loc>
+    <lastmod>2021-05-08T06:34:35.872Z</lastmod>
+    <data>
+        <display>
+        <title>setup_webrtc_tun_server</title>
+        <pubTime>2021-05-08T06:18:23.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2021/03/16/speed-up-zsh/</loc>
+    <lastmod>2021-03-16T10:56:14.791Z</lastmod>
+    <data>
+        <display>
+        <title>speed-up-zsh</title>
+        <pubTime>2021-03-16T07:22:53.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+    
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/05/17/restore-gitlab-repos/</loc>
+    <lastmod>2021-01-22T15:55:46.268Z</lastmod>
+    <data>
+        <display>
+        <title>gitlab 批量恢复被删除的 repo</title>
+        <pubTime>2018-05-17T12:53:17.000Z</pubTime>
+        
+        <tag>GitLab</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/06/23/convert-kux-to-mp4/</loc>
+    <lastmod>2021-01-22T15:55:46.251Z</lastmod>
+    <data>
+        <display>
+        <title>优酷 kux 文件转码</title>
+        <pubTime>2018-06-23T09:14:28.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2020/09/16/draw-pic-tools/</loc>
+    <lastmod>2021-01-22T15:55:46.233Z</lastmod>
+    <data>
+        <display>
+        <title>各类画图工具</title>
+        <pubTime>2020-09-16T13:00:58.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2020/07/09/Raspberry-pi-camera-live/</loc>
+    <lastmod>2021-01-22T15:55:46.223Z</lastmod>
+    <data>
+        <display>
+        <title>使用树梅派 ffmpeg 进行 USB 摄像头画面直播</title>
+        <pubTime>2020-07-09T15:45:10.000Z</pubTime>
+        
+        <tag>RaspberryPi</tag>
+         
+        <tag>ffmpeg</tag>
+         
+        <tag>RTMP</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/12/02/color-convert-shader/</loc>
+    <lastmod>2021-01-22T15:55:46.206Z</lastmod>
+    <data>
+        <display>
+        <title>shader 中的颜色空间转换</title>
+        <pubTime>2018-12-02T15:59:57.000Z</pubTime>
+        
+        <tag>shader</tag>
+         
+        <tag>OpenGL</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/04/13/ubuntu-l2tp/</loc>
+    <lastmod>2021-01-22T15:55:46.192Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu L2TP 配置</title>
+        <pubTime>2018-04-13T08:19:58.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2020/06/25/inside-darwin-linker/</loc>
+    <lastmod>2021-01-22T15:55:46.174Z</lastmod>
+    <data>
+        <display>
+        <title>Inside the Linker</title>
+        <pubTime>2020-06-25T06:36:54.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/06/22/ubuntu-docker-without-sudo/</loc>
+    <lastmod>2021-01-22T15:55:46.159Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu 下免 root 权限执行 docker 命令</title>
+        <pubTime>2018-06-22T15:01:34.000Z</pubTime>
+        
+        <tag>ubuntu</tag>
+         
+        <tag>docker</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2019/01/12/try-appcenter-ms/</loc>
+    <lastmod>2021-01-22T15:55:46.142Z</lastmod>
+    <data>
+        <display>
+        <title>appcenter.ms 初体验</title>
+        <pubTime>2019-01-12T04:37:21.000Z</pubTime>
+        
+        <tag>CI</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/03/28/ffmpeg-add-watermark/</loc>
+    <lastmod>2021-01-22T15:55:46.113Z</lastmod>
+    <data>
+        <display>
+        <title>FFmpeg 水印、图片转视频</title>
+        <pubTime>2018-03-28T10:08:55.000Z</pubTime>
+        
+        <tag>ffmpeg</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/12/05/horse-butt-and-space-shuttle/</loc>
+    <lastmod>2021-01-22T15:55:46.081Z</lastmod>
+    <data>
+        <display>
+        <title>马屁股决定航天飞机</title>
+        <pubTime>2018-12-05T14:31:49.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/09/09/macos-add-globle-shortcut/</loc>
+    <lastmod>2021-01-22T15:55:45.973Z</lastmod>
+    <data>
+        <display>
+        <title>给 Xcode run 添加全局快捷键</title>
+        <pubTime>2018-09-09T13:22:52.000Z</pubTime>
+        
+        <tag>Xcode</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/07/01/markdown-details/</loc>
+    <lastmod>2021-01-22T15:55:45.954Z</lastmod>
+    <data>
+        <display>
+        <title>markdown 中使用可展开的区域 details</title>
+        <pubTime>2018-07-01T09:46:51.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2020/01/01/phicomm-n1-openwrt/</loc>
+    <lastmod>2021-01-22T15:55:45.920Z</lastmod>
+    <data>
+        <display>
+        <title>斐讯 N1 折腾手记</title>
+        <pubTime>2020-01-01T13:18:20.000Z</pubTime>
+        
+        <tag>N1</tag>
+         
+        <tag>phicomm</tag>
+         
+        <tag>openwrt</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/03/22/reset-gitlab-user-password-through-terminal/</loc>
+    <lastmod>2021-01-22T15:55:45.899Z</lastmod>
+    <data>
+        <display>
+        <title>通过命令行重置 GitLab 用户密码</title>
+        <pubTime>2018-03-22T02:01:41.000Z</pubTime>
+        
+        <tag>GitLab</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/12/05/keywords-in-http/</loc>
+    <lastmod>2021-01-22T15:55:45.878Z</lastmod>
+    <data>
+        <display>
+        <title>HTTP keywords you should know</title>
+        <pubTime>2018-12-05T14:13:58.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/03/28/pod-install-parsing-error/</loc>
+    <lastmod>2021-01-22T15:55:45.851Z</lastmod>
+    <data>
+        <display>
+        <title>gRPC Pod install/update 时 parsing error 的处理</title>
+        <pubTime>2018-03-28T08:44:41.000Z</pubTime>
+        
+        <tag>CocoaPods</tag>
+         
+        <tag>iOS</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/05/08/xcrun-error-locate-sdk/</loc>
+    <lastmod>2021-01-22T15:55:45.809Z</lastmod>
+    <data>
+        <display>
+        <title>xcrun error SDK "xx" cannot be locateed 解决</title>
+        <pubTime>2018-05-08T09:21:46.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/07/01/font-awesone-in-markdown/</loc>
+    <lastmod>2021-01-22T15:55:45.792Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown 文档中使用 font awesome</title>
+        <pubTime>2018-07-01T09:15:40.000Z</pubTime>
+        
+        <tag>markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/04/13/macos-manage/</loc>
+    <lastmod>2021-01-22T15:55:45.765Z</lastmod>
+    <data>
+        <display>
+        <title>mac 管理</title>
+        <pubTime>2018-04-13T08:12:42.000Z</pubTime>
+        
+        <tag>macos</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/05/18/build-caffe-with-python/</loc>
+    <lastmod>2021-01-22T15:55:45.740Z</lastmod>
+    <data>
+        <display>
+        <title>编译 caffe 并在 python 中使用</title>
+        <pubTime>2018-05-18T05:30:18.000Z</pubTime>
+        
+        <tag>caffe</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/05/14/create-fastlane-action/</loc>
+    <lastmod>2021-01-22T15:55:45.703Z</lastmod>
+    <data>
+        <display>
+        <title>给 fastlane 添加自定义 action</title>
+        <pubTime>2018-05-14T06:33:19.000Z</pubTime>
+        
+        <tag>fastlane</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/10/16/fswatch-and-rsync/</loc>
+    <lastmod>2021-01-22T15:55:45.684Z</lastmod>
+    <data>
+        <display>
+        <title>fswatch_and_rsync</title>
+        <pubTime>2018-10-16T05:54:50.000Z</pubTime>
+        
+        <tag>fswatch</tag>
+         
+        <tag>rsync</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2018/04/24/curve-filter-in-gpuimage/</loc>
+    <lastmod>2021-01-22T15:55:45.648Z</lastmod>
+    <data>
+        <display>
+        <title>GPUImage 中的曲线滤镜</title>
+        <pubTime>2018-04-24T00:35:34.000Z</pubTime>
+        
+        <tag>GPUImage</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imqsc.xyz/2020/02/01/youtube-original-ai/</loc>
+    <lastmod>2021-01-22T15:55:45.600Z</lastmod>
+    <data>
+        <display>
+        <title>Youtube Original [THE AGE OF AI]</title>
+        <pubTime>2020-02-01T14:38:52.000Z</pubTime>
+        
+        <tag>drama</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
