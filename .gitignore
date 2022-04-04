@@ -1,0 +1,7 @@
+# output
+dist/
+public/
+resources/
+
+# hugo binary
+.hugo/

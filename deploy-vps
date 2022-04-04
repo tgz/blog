@@ -1,0 +1,11 @@
+#!/bin/sh
+USER=ubuntu
+HOST=oracle
+DIR=blog/
+
+hugo && rsync -avz --delete public/ ${USER}@${HOST}:~/${DIR}
+
+echo "start deploy backup server...."
+rsync -avz --delete public/ vps:~/${DIR}
+
+exit 0
